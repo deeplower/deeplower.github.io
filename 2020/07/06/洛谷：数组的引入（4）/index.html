@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>洛谷：数组的引入（4） | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="洛谷：数组的引入（4）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="洛谷：数组的引入（4）">
+<meta property="og:url" content="https://deeplower.github.io/2020/07/06/%E6%B4%9B%E8%B0%B7%EF%BC%9A%E6%95%B0%E7%BB%84%E7%9A%84%E5%BC%95%E5%85%A5%EF%BC%884%EF%BC%89/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="洛谷：数组的引入（4）">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200222200602470.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RlZXBsb3c=,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200222201050693.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RlZXBsb3c=,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200222203926816.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RlZXBsb3c=,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200222225500153.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RlZXBsb3c=,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200222230103524.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RlZXBsb3c=,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200222230252518.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RlZXBsb3c=,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-07-06T12:16:59.000Z">
+<meta property="article:modified_time" content="2020-07-07T03:25:33.455Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200222200602470.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RlZXBsb3c=,size_16,color_FFFFFF,t_70">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://deeplower.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-洛谷：数组的引入（4）" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/07/06/%E6%B4%9B%E8%B0%B7%EF%BC%9A%E6%95%B0%E7%BB%84%E7%9A%84%E5%BC%95%E5%85%A5%EF%BC%884%EF%BC%89/" class="article-date">
+  <time class="dt-published" datetime="2020-07-06T12:16:59.000Z" itemprop="datePublished">2020-07-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/OJ/">OJ</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      洛谷：数组的引入（4）
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="洛谷：数组的引入（4）"><a href="#洛谷：数组的引入（4）" class="headerlink" title="洛谷：数组的引入（4）"></a>洛谷：数组的引入（4）</h1><h2 id="P1046-陶陶摘苹果"><a href="#P1046-陶陶摘苹果" class="headerlink" title="P1046 陶陶摘苹果"></a>P1046 陶陶摘苹果</h2><p><img src="https://img-blog.csdnimg.cn/20200222200602470.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RlZXBsb3c=,size_16,color_FFFFFF,t_70" alt="P1046 陶陶摘苹果"><br>【代码】</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">10</span>];</span><br><span class="line">	<span class="keyword">int</span> length;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">for</span> ( i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;length);</span><br><span class="line">		a[i]= length;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> ability;</span><br><span class="line">	<span class="keyword">int</span> count =<span class="number">0</span>;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;ability);</span><br><span class="line">	<span class="keyword">for</span> ( i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++)&#123;</span><br><span class="line">		<span class="keyword">if</span> ( a[i] &lt;= ability +<span class="number">30</span>)</span><br><span class="line">		count++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,count);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>【分析】<br>1、用for循环、数组记录数据；<br>2、用for循环在特定条件（if语句）下使得计数器（count）增加。</p>
+<h2 id="P1047-校门外的树"><a href="#P1047-校门外的树" class="headerlink" title="P1047 校门外的树"></a>P1047 校门外的树</h2><p><img src="https://img-blog.csdnimg.cn/20200222201050693.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RlZXBsb3c=,size_16,color_FFFFFF,t_70" alt="P1047 校门外的树"><br>【代码】</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> length;</span><br><span class="line">	<span class="keyword">int</span> rest=<span class="number">0</span>;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;length);</span><br><span class="line">	length = length + <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">int</span> area_number;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;area_number);</span><br><span class="line">	<span class="keyword">int</span> l[length];</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">for</span> ( i=<span class="number">0</span>; i&lt;length; i++)&#123;</span><br><span class="line">		l[i] = <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> start,over;</span><br><span class="line">	<span class="keyword">int</span> k;</span><br><span class="line">	<span class="keyword">for</span> ( k=<span class="number">0</span>; k&lt;area_number; k++)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;start,&amp;over);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span> ( i=<span class="number">0</span>; i&lt;length; i++)&#123;</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">if</span> (i &gt;= start &amp;&amp; i &lt;= over)&#123;</span><br><span class="line">				l[i]=<span class="number">0</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> ( i=<span class="number">0</span>; i&lt;length; i++)&#123;</span><br><span class="line">		<span class="keyword">if</span> ( l[i]==<span class="number">1</span>)&#123;</span><br><span class="line">			rest++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,rest);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>【分析】首先对题目进行简单的分析和转换：</p>
+<h2 id="1、思路"><a href="#1、思路" class="headerlink" title="1、思路"></a>1、思路</h2><p>题目中提到马路和数轴的概念，其实可以转换成数轴和数轴上的整数点的概念。</p>
+<h2 id="2、转化"><a href="#2、转化" class="headerlink" title="2、转化"></a>2、转化</h2><p>那么题目就可以看成：<br>背景：一个数轴，从零开始，一直到L，一共记录有L+1个点（包括两端）；<br>操作：设置若干个范围，每一次都将该范围上的点（闭区间）抹除；<br>问题：剩余多少个点？</p>
+<h2 id="3、代码实现"><a href="#3、代码实现" class="headerlink" title="3、代码实现"></a>3、代码实现</h2><p>那么如何解决呢？<br> ①代码的常规操作（正常的输入、数组的定义和初始化）；<br> <em>ps：在此特别注意不要把数组的长度定义错了，见背景。</em><br> ②首先利用数组把讨论范围内的数组中的数都定义为<strong>1</strong>（相当于元素全为1的容器），此时<strong>1</strong>的含义就是“<strong>有</strong>”；<br> 然后就是想办法把应该需要移走的树（也就是数轴上的点）设置为<strong>0</strong>，此时<strong>0</strong>的含义就是“<strong>无</strong>”；<br> ③对于设置0的方法，这一用了一个<strong>嵌套的for循环</strong>：<br> 外层设置for循环的原因是因为都多个区域需要设置，不同区域之间无规律可循。因此只需将for循环的长度设置为区域的个数；<br> 内层for循环的目的就是区域内部的处理，将数组中大于等于起点的，小于等于终点的数都设置为0（注意首尾都是0）。<br> ④最后一开始所设置的计数数组就被我们转换成了“<strong>答案数组</strong>”，只需利用for循环遍历数组，用计数器显示1的个数就可以了。最后输出。</p>
+<h2 id="P1427-小鱼的数字游戏"><a href="#P1427-小鱼的数字游戏" class="headerlink" title="P1427 小鱼的数字游戏"></a>P1427 小鱼的数字游戏</h2><p><img src="https://img-blog.csdnimg.cn/20200222203926816.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RlZXBsb3c=,size_16,color_FFFFFF,t_70" alt="P1427 小鱼的数字游戏"><br>【代码】</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> count[<span class="number">100</span>];</span><br><span class="line">	<span class="keyword">for</span> ( i=<span class="number">0</span>; i&lt;<span class="number">100</span>; i++)&#123;</span><br><span class="line">		count[i]=<span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> j=<span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">do</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;x);</span><br><span class="line">	    j++;</span><br><span class="line">		count[j] = x;</span><br><span class="line">	    </span><br><span class="line">	&#125;<span class="keyword">while</span> ( x!= <span class="number">0</span>);</span><br><span class="line">	<span class="keyword">int</span> k=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> count_out[j];</span><br><span class="line">	<span class="keyword">for</span> ( k=<span class="number">0</span>; k&lt;j; k++)&#123;</span><br><span class="line">		count_out[j-k<span class="number">-1</span>]=count[k];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> ( k=<span class="number">0</span>; k&lt;j; k++)&#123;</span><br><span class="line">	   	<span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,count_out[k]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>【分析】我们先来分析一下这个代码的流程。<br>题目看似非常简单（对大佬来讲就是非常简单），对于我这种真正的蒟蒻，只能一步一步的来。</p>
+<h2 id="1、思路-1"><a href="#1、思路-1" class="headerlink" title="1、思路"></a>1、思路</h2><p>设置两个数组，一个用来输入，一个人用来输出。</p>
+<h2 id="2、转化-1"><a href="#2、转化-1" class="headerlink" title="2、转化"></a>2、转化</h2><p>题目就是：输入一行数，倒序输出，然后省去作为结束信号的0.</p>
+<h2 id="3、代码实现-1"><a href="#3、代码实现-1" class="headerlink" title="3、代码实现"></a>3、代码实现</h2><p>①<strong>正常操作：</strong>（变量的定义和初始化，数组的定义和初始化）；<br><em>ps：对于未知个数的变量录入数组，将数组过的容量设置为足够大即可；但是在输入这些变量的时候一般都有结束信号（如本题的0），才可用while循环终止录入数据。</em></p>
+<p>②<strong>注意事项：</strong><br>在定义第一个数组时，以及把数据录入到第二个数组时，要有清晰的头脑明白其中的连接关系，不然因为少加或多加一导致录入错位，或者是数据缺失和凭空出现，都是十分滑稽的行为。<br><strong>下面清清楚楚地表达一下关系（没错学渣就是要这么做）：</strong></p>
+<h2 id="数组的使用规范"><a href="#数组的使用规范" class="headerlink" title="数组的使用规范"></a>数组的使用规范</h2><p> <strong>1. 条分缕析</strong><br> 为了使用数组的规范化，方便以后操作，一律采用从0开始计数；<br> 这样做有几点好处和规律：<br> ①定义数组时，方括号里面是多少，就能放多少个数（容量）；<br> ②一律采用下面的格式，如果有微调，在“整数”一处发挥即可。</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i;</span><br><span class="line"><span class="keyword">for</span> ( i=<span class="number">0</span>; i&lt;整数; i++)&#123;语句&#125;</span><br></pre></td></tr></table></figure>
+<p>例如</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> count[<span class="number">100</span>];</span><br><span class="line">	<span class="keyword">for</span> ( i=<span class="number">0</span>; i&lt;<span class="number">100</span>; i++)&#123;</span><br><span class="line">		count[i]=<span class="number">0</span>;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p> <strong>2. 根据代码和题目说事</strong></p>
+<p> 前文：<code>j</code>代表的是输入的数的个数（因为 <code>j</code> 与 <code>count[j]</code>中的<code>j</code>保持了统一（见下）<br>【循环体里 <code>j++;</code>和<code>count[j] = x;</code>的次序保证了统一（<code>j</code>初始化为-1）！】</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;x);</span><br><span class="line">    j++;</span><br><span class="line">	count[j] = x;</span><br></pre></td></tr></table></figure>
+<p>那么后文： 因为要求输出的时候省略作为结束信号的0。而由上文发现，<code>j</code>初始化为-1导致了此时的<code>j</code>就是应该输出的数的个数（由<code>count[j]</code>与<code>j</code>的<code>j</code>值统一可发现，在赋值的时候<strong>数组最后一项的下标是数组的容量减一</strong>）。<br>因此直接写出：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> k=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> count_out[j];</span><br><span class="line">	<span class="keyword">for</span> ( k=<span class="number">0</span>; k&lt;j; k++)&#123;</span><br><span class="line">		count_out[j-k<span class="number">-1</span>]=count[k];</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>3、倒序对应的烦人事</strong></p>
+<p>有没有发现上面的片段出现了：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">count_out[j-k<span class="number">-1</span>]=count[k];</span><br></pre></td></tr></table></figure>
+<p>为啥要减一？<br>本来<code>j</code>代表的就是输出的数的个数，<code>k</code>都是从0开始计数的（规范的好处），根据<strong>数组最后一项数组的下标是数组的容量减一</strong>，所以需要减一（末项对应首项，所谓倒序对应），然后自然就把末尾的零略去了。<br>对齐了一项，又规定了起点，肯定了数组的容量，结果必然是规范的。<br><strong>4、开心的输出</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> ( k=<span class="number">0</span>; k&lt;j; k++)&#123;</span><br><span class="line">	   	<span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,count_out[k]);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>回头一看只要输出就OK了哈哈哈！</p>
+<p><em>ps：此处设置do-while循环是因为x初始化的值就是0，进行一次输入就可以避免跳出循环。使用do-while循环就是为了避免初始化导致直接跳出循环！（见下）</em></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;x);</span><br><span class="line">    j++;</span><br><span class="line">	count[j] = x;</span><br><span class="line">    </span><br><span class="line">&#125;<span class="keyword">while</span> ( x!= <span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+
+<p>下面提供一个其他人写的关于数组的知识，标上出处（瞻仰大佬）。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[数组用法小技巧版权声明：本文为博主原创文章，遵循 CC <span class="number">4.0</span> BY-SA 版权协议，转载请附上原文出处链接和本声明。]</span><br><span class="line">(https:<span class="comment">//blog.csdn.net/u011017694/article/details/84763815)</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>【零分的代码】<br>只要一个加一或者减一<strong>不规范</strong>，就会导致输出的<strong>全面崩盘</strong>。<br>一方面我们要努力探索其中的<strong>逻辑关系</strong>，但是更重要的是，我们要遵守写代码（定义数组）的<strong>规范</strong>：<br>这样会使我们更流畅的写出代码，并且把问题的<strong>聚焦点</strong>放在<strong>有价值的地方</strong>，避免无谓的转圈圈。</p>
+<h2 id="P1428-小鱼比可爱"><a href="#P1428-小鱼比可爱" class="headerlink" title="P1428 小鱼比可爱"></a>P1428 小鱼比可爱</h2><p><img src="https://img-blog.csdnimg.cn/20200222225500153.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RlZXBsb3c=,size_16,color_FFFFFF,t_70" alt="P1428 小鱼比可爱"><br>【代码】</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> number;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;number);</span><br><span class="line">	<span class="keyword">int</span> cute[number];</span><br><span class="line">	<span class="keyword">int</span> c_number;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">for</span> ( i=<span class="number">0</span>; i&lt;number; i++)&#123;</span><br><span class="line">		<span class="built_in">scanf</span> (<span class="string">&quot;%d&quot;</span>,&amp;c_number);</span><br><span class="line">		cute[i]=c_number;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> comp[number];</span><br><span class="line">	<span class="keyword">for</span> ( i=<span class="number">0</span>; i&lt;number; i++ )&#123;</span><br><span class="line">		comp[i]=<span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> ( i=<span class="number">1</span>; i&lt;number; i++ )&#123;</span><br><span class="line">		<span class="keyword">int</span> j;</span><br><span class="line">		<span class="keyword">for</span> ( j=<span class="number">0</span>; j&lt;i; j++ )&#123;</span><br><span class="line">			<span class="keyword">if</span> ( cute[i]&gt;cute[j] )&#123;</span><br><span class="line">				comp[i] = comp[i] +<span class="number">1</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> ( i=<span class="number">0</span>; i&lt;number; i++ )&#123;</span><br><span class="line">		<span class="built_in">printf</span> (<span class="string">&quot;%d &quot;</span>,comp[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>【分析】<br>1、日常操作；<br>2、嵌套的for循环：外层的for循环用来确保每一个小鱼参与计算；内层的for循环确保每一个排在该小鱼的左边的小鱼得到比较；<br>3、用计数器记录即可。</p>
+<h2 id="P2141-珠心算测验"><a href="#P2141-珠心算测验" class="headerlink" title="P2141 珠心算测验"></a>P2141 珠心算测验</h2><p><img src="https://img-blog.csdnimg.cn/20200222230103524.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RlZXBsb3c=,size_16,color_FFFFFF,t_70" alt="P2141 珠心算测验"><br>【代码】</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,c,d,e=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n);</span><br><span class="line">    <span class="keyword">int</span> a[n],b[n];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i]); </span><br><span class="line">        b[i]=a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n<span class="number">-1</span>;++i)</span><br><span class="line">    &#123;</span><br><span class="line">        c=a[i];  </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>;j&lt;=n;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            d=a[j];   </span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">1</span>;k&lt;=n;k++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>( b[k] == c+d)  </span><br><span class="line">                &#123;</span><br><span class="line">                    e++;  </span><br><span class="line">                    b[k] = <span class="number">0</span>;  </span><br><span class="line">                &#125;</span><br><span class="line">            &#125; </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,e);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>【分析】关键就是避免类似于5=1+4；5=2+3的重复。</p>
+<h2 id="P1567-统计天数"><a href="#P1567-统计天数" class="headerlink" title="P1567 统计天数"></a>P1567 统计天数</h2><p><img src="https://img-blog.csdnimg.cn/20200222230252518.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RlZXBsb3c=,size_16,color_FFFFFF,t_70" alt="P1567 统计天数"><br>【代码】</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,n,x,max=<span class="number">0</span>,z=<span class="number">0</span>,y=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n);</span><br><span class="line">    <span class="keyword">for</span> (i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;x);</span><br><span class="line">        <span class="keyword">if</span> (y&lt;x) &#123;z++;y=x;&#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">if</span> (max&lt;z) &#123;max=z;y=x;z=<span class="number">1</span>;&#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                y=x;</span><br><span class="line">                z=<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (max==<span class="number">0</span>) &#123;</span><br><span class="line">           <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,n); 	</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>  &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,max);</span><br><span class="line">&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>【分析】<br>……引用了库函数……我懒</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://deeplower.github.io/2020/07/06/%E6%B4%9B%E8%B0%B7%EF%BC%9A%E6%95%B0%E7%BB%84%E7%9A%84%E5%BC%95%E5%85%A5%EF%BC%884%EF%BC%89/" data-id="cklumuola000u3sgf71dhg79p" data-title="洛谷：数组的引入（4）" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/07/06/C%20Primer%20Plus_Chapter6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Chapter 6 Loop for C Primer Plus
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/07/06/%E6%B4%9B%E8%B0%B7%EF%BC%9A%E6%95%B0%E5%AD%A6%E6%80%9D%E6%83%B3%E5%BC%80%E5%A7%8B%E4%BA%86%EF%BC%9F%E8%BF%98%E8%BF%9C%E8%BF%9C%E6%9C%AA%E5%88%B0%EF%BC%81%EF%BC%883%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">洛谷：数学思想开始了？还远远未到！（3）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C-Primer-Plus/">C Primer Plus</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/OJ/">OJ</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/">课程设计</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag">读书笔记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">读书笔记</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/03/04/C++%20STL%20string/">C++ STL——string</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/04/%E4%B8%93%E9%A2%98%EF%BC%9AC++%20STL/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/04/%E4%BB%80%E4%B9%88%E6%98%AFurl/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/04/%E5%A6%82%E4%BD%95%E5%BC%80%E5%90%AF%E4%B8%80%E6%AE%B5%E6%95%88%E7%8E%87%E9%AB%98%E7%9A%84%E6%97%B6%E9%97%B4%E6%AE%B5/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/04/%E6%80%8E%E4%B9%88%E5%A4%87%E8%80%83CS%E4%B8%93%E4%B8%9A%E8%AF%BE408%E2%80%94%E2%80%942021.2.28/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

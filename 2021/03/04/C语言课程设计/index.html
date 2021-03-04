@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>矩阵的构造与打印问题的分析与解决 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="有关螺旋矩阵和蛇形矩阵的构造与打印。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="矩阵的构造与打印问题的分析与解决">
+<meta property="og:url" content="https://deeplower.github.io/2021/03/04/C%E8%AF%AD%E8%A8%80%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="有关螺旋矩阵和蛇形矩阵的构造与打印。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://deeplower.github.io/images/blog10_1.png">
+<meta property="og:image" content="https://deeplower.github.io/images/blog10_2.png">
+<meta property="og:image" content="https://deeplower.github.io/images/blog10_3.png">
+<meta property="og:image" content="https://deeplower.github.io/images/blog10_4.png">
+<meta property="og:image" content="https://deeplower.github.io/images/blog10_5.png">
+<meta property="og:image" content="https://deeplower.github.io/images/blog10_6.png">
+<meta property="og:image" content="https://deeplower.github.io/images/blog10_7.png">
+<meta property="article:published_time" content="2021-03-04T08:54:13.824Z">
+<meta property="article:modified_time" content="2020-07-18T01:55:44.521Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://deeplower.github.io/images/blog10_1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://deeplower.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-C语言课程设计" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/03/04/C%E8%AF%AD%E8%A8%80%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/" class="article-date">
+  <time class="dt-published" datetime="2021-03-04T08:54:13.824Z" itemprop="datePublished">2021-03-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/">课程设计</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      矩阵的构造与打印问题的分析与解决
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="矩阵的构造与打印问题的分析与解决"><a href="#矩阵的构造与打印问题的分析与解决" class="headerlink" title="矩阵的构造与打印问题的分析与解决"></a>矩阵的构造与打印问题的分析与解决</h1><h2 id="（一）问题描述"><a href="#（一）问题描述" class="headerlink" title="（一）问题描述"></a>（一）问题描述</h2><p>矩阵的构造与打印，具有非常简洁的输入输出：即根据提示在两个程序中输入一个代表矩阵阶数的数字，要求程序输出对应的矩阵。</p>
+<ul>
+<li>输入：根据交互语句判定输入矩阵的类型+一个数字（代表矩阵的阶数）</li>
+<li>输出：对应的矩阵</li>
+</ul>
+<p>两个矩阵分别有图示的数字走向：</p>
+<p><img src="/images/blog10_1.png" alt="alt"></p>
+<h2 id="（二）基本要求"><a href="#（二）基本要求" class="headerlink" title="（二）基本要求"></a>（二）基本要求</h2><p>根据题目的表述以及个人的理解，总结出如下要求：</p>
+<p>（1）能够在在程序的开始（也就是在输入矩阵阶数之前）有选择不同矩阵的交互形式，能够实现在螺旋矩阵和蛇形矩阵之间自主选择；</p>
+<p>（2）能够实现较大阶数的矩阵的输出（阶数100之内）；</p>
+<p>（3）在一次选择并输出矩阵之后，能够实现循环输入，自主控制停止的功能。</p>
+<h2 id="（三）系统分析和设计"><a href="#（三）系统分析和设计" class="headerlink" title="（三）系统分析和设计"></a>（三）系统分析和设计</h2><p>用二维矩阵来模拟矩阵的概念，必然要考虑矩阵的阶数即容量问题。在主体函数中主要实现两个功能：其一是实现在螺旋矩阵和蛇形矩阵之间自主选择；其二是实现循环输入，能够自主控制停止。另外再定义两个子函数专门解决两个矩阵的核心问题：如何将矩阵阶数这一信息转化为矩阵本身。</p>
+<h3 id="（1）螺旋矩阵的解决"><a href="#（1）螺旋矩阵的解决" class="headerlink" title="（1）螺旋矩阵的解决"></a><strong>（1）螺旋矩阵的解决</strong></h3><h4 id="1、如何模拟矩阵的概念？"><a href="#1、如何模拟矩阵的概念？" class="headerlink" title="1、如何模拟矩阵的概念？"></a>1、如何模拟矩阵的概念？</h4><p>首先肯定是建立二维数组来模拟一个矩阵。</p>
+<h4 id="2、以什么单位来思考问题？"><a href="#2、以什么单位来思考问题？" class="headerlink" title="2、以什么单位来思考问题？"></a>2、以什么单位来思考问题？</h4><p>根据数字的走向来思考问题。因为螺旋矩阵就是以矩阵的中心按照数的顺序不断地由外部到内部画圈。因此我们以“圈”为单位来考虑问题。</p>
+<h4 id="3、确定了以“圈”为单位之后，怎么具体解决问题？"><a href="#3、确定了以“圈”为单位之后，怎么具体解决问题？" class="headerlink" title="3、确定了以“圈”为单位之后，怎么具体解决问题？"></a>3、确定了以“圈”为单位之后，怎么具体解决问题？</h4><p>（1）从单个的圈内考虑，矩阵转一圈需要有三次的方向变换。每一次变换方向对应的二维数组的坐标规律都会有很大的变化。因此需要用不同的循环将数字依次填到对应的元素上；</p>
+<p>（2）把“圈”当作一个整体。容易想到外部的循环和圈数有关系；</p>
+<p>（3）我们发现如果矩阵的阶数是偶数且为n，那么这个矩阵共有n/2圈。如果矩阵的阶数为奇数，依然将圈数认为是n/2圈的话，中间会有一个孤立的数字。因此要事先判断输入的矩阵的阶数的奇偶性加以区分。</p>
+<h4 id="4、圈与圈之间的联系"><a href="#4、圈与圈之间的联系" class="headerlink" title="4、圈与圈之间的联系"></a>4、圈与圈之间的联系</h4><p>圈数的递增是连接不同圈的关键数字。其中的数字关系是：当i=0（第一圈）就是第一圈的坐标关系；当i=1（第二圈）就是第二圈的坐标关系。</p>
+<h3 id="（2）蛇形矩阵的解决"><a href="#（2）蛇形矩阵的解决" class="headerlink" title="（2）蛇形矩阵的解决"></a><strong>（2）蛇形矩阵的解决</strong></h3><h4 id="1、如何模拟矩阵的概念？-1"><a href="#1、如何模拟矩阵的概念？-1" class="headerlink" title="1、如何模拟矩阵的概念？"></a>1、如何模拟矩阵的概念？</h4><p>同样地，用二维数组模拟矩阵。</p>
+<h4 id="2、根据什么结构解决问题？"><a href="#2、根据什么结构解决问题？" class="headerlink" title="2、根据什么结构解决问题？"></a>2、根据什么结构解决问题？</h4><p>我们观察发现以一个矩阵的中心点（可能是一个数也有可能是一个二阶矩阵的中心），关于中心点对称的蛇形矩阵数，两个数之和为矩阵阶数的平方加一。因此我们只需求出上三角，就可以根据坐标关系和总和的关系求出完整的矩阵。</p>
+<h4 id="3、如何求出上三角？"><a href="#3、如何求出上三角？" class="headerlink" title="3、如何求出上三角？"></a>3、如何求出上三角？</h4><p>（1）运用和螺旋矩阵一样的思考方式：从数字的走向来思考。</p>
+<p>（2）我们发现其实蛇形矩阵的上三角就是由多条对角线组成的。而且数字顺着走向是自然数列。</p>
+<p>（3）根据数学规律，就可以根据对角线的条数算出完整的前k条对角线占据的数字个数总和是多少。即k*(k+1)/2.那么显然第k+1条上的注自只需要k*(k+1)/2加上一个数就可以了。</p>
+<p>（4）我们发现，虽然for循环是死的，但是坐标是活的。如果前面的完整的对角线的条数k是奇数，那么就是k*(k+1)/2加上横坐标；k如果是偶数就是k*(k+1)/2加上纵坐标。这样用if-else语句就可以控制。</p>
+<h4 id="4、统筹"><a href="#4、统筹" class="headerlink" title="4、统筹"></a>4、统筹</h4><p>最后结合2、3、就可以先求出上三角，然后求出完整的矩阵。最后输出就可以了。</p>
+<h2 id="（四）结构图"><a href="#（四）结构图" class="headerlink" title="（四）结构图"></a>（四）结构图</h2><p><img src="/images/blog10_2.png" alt="alt"></p>
+<h2 id="（五）流程图"><a href="#（五）流程图" class="headerlink" title="（五）流程图"></a>（五）流程图</h2><p><img src="/images/blog10_3.png" alt="alt"></p>
+<h2 id="（六）程序清单"><a href="#（六）程序清单" class="headerlink" title="（六）程序清单"></a>（六）程序清单</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Helix</span><span class="params">(<span class="keyword">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Serpentine</span><span class="params">(<span class="keyword">void</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	**定义控制判断选择不同矩阵的变量</span></span><br><span class="line"><span class="comment">	**定义拥有scanf函数的返回值的变量</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	<span class="keyword">int</span> judge_num;</span><br><span class="line">	<span class="keyword">int</span> status;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;请输入数字1代表您需要打印螺旋矩阵，输入数字2代表您需要打印蛇形矩阵。\n&quot;</span>);<span class="comment">//交互语句</span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;judge_num);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">switch</span> (judge_num)<span class="comment">//实现选择不同的矩阵</span></span><br><span class="line">    &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">    	getchar();</span><br><span class="line">    	<span class="built_in">printf</span>(<span class="string">&quot;请输入需要打印的螺旋矩阵的阶数：\n&quot;</span>);</span><br><span class="line">    	Helix();</span><br><span class="line">    	<span class="keyword">break</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">    	getchar();</span><br><span class="line">    	<span class="built_in">printf</span>(<span class="string">&quot;请输入需要打印的蛇形矩阵的阶数：\n&quot;</span>);</span><br><span class="line">    	Serpentine();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> qor0;<span class="comment">//定义控制是否循环输入的变量</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;q for quit, 0 for continue.\n &quot;</span>);<span class="comment">//交互语句</span></span><br><span class="line">    status = <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;qor0);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span> (status == <span class="number">1</span>)<span class="comment">//通过scanf函数的返回值控制while循环从而实现循环输入的功能</span></span><br><span class="line">    &#123;</span><br><span class="line">    	<span class="built_in">printf</span>(<span class="string">&quot;请输入数字1代表您需要打印螺旋矩阵，输入数字2代表您需要打印蛇形矩阵。\n&quot;</span>);</span><br><span class="line">    	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;judge_num);</span><br><span class="line">    	<span class="keyword">switch</span> (judge_num)</span><br><span class="line">    	&#123;</span><br><span class="line">    	<span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">    		getchar();</span><br><span class="line">    		<span class="built_in">printf</span>(<span class="string">&quot;请输入需要打印的螺旋矩阵的阶数：\n&quot;</span>);</span><br><span class="line">    		Helix();</span><br><span class="line">    		<span class="keyword">break</span>;</span><br><span class="line">    </span><br><span class="line">    	<span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">    		getchar();</span><br><span class="line">    		<span class="built_in">printf</span>(<span class="string">&quot;请输入需要打印的蛇形矩阵的阶数：\n&quot;</span>);</span><br><span class="line">    		Serpentine();</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	<span class="built_in">printf</span>(<span class="string">&quot;q for quit, 0 for continue.\n &quot;</span>);<span class="comment">//结尾重新输入qor0的值，避免循环自行跳出</span></span><br><span class="line">    	status = <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;qor0);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span>  <span class="title">Helix</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;                <span class="comment">//n表示矩阵的阶数 </span></span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">	<span class="keyword">int</span> mat[<span class="number">100</span>][<span class="number">100</span>];    <span class="comment">//默认矩阵的阶数不会超过100</span></span><br><span class="line">	<span class="built_in">memset</span>(mat, <span class="number">0</span>, <span class="keyword">sizeof</span>(mat));<span class="comment">//将以mat为起始地址的数组全部初始化为0</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> circle;           <span class="comment">//circle表示总圈数</span></span><br><span class="line">	circle = n / <span class="number">2</span>;</span><br><span class="line">	<span class="keyword">if</span> (n % <span class="number">2</span> == <span class="number">1</span>)</span><br><span class="line">		mat[n / <span class="number">2</span>][n / <span class="number">2</span>] = n * n;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>;          <span class="comment">//i表示动态变化的圈数</span></span><br><span class="line">	<span class="keyword">int</span> cnt = <span class="number">1</span>;        <span class="comment">//cnt表示计数器</span></span><br><span class="line">	<span class="keyword">int</span> j, k;           <span class="comment">//分别表示控制外，内循环的循环数</span></span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; circle; j++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (k = i; k &lt;= n - i - <span class="number">2</span>; k++)</span><br><span class="line">		&#123;</span><br><span class="line">			mat[i][k] = cnt++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (k = i; k &lt;= n - i - <span class="number">2</span>; ++k)</span><br><span class="line">		&#123;</span><br><span class="line">			mat[k][n - i - <span class="number">1</span>] = cnt++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (k = n - i - <span class="number">1</span>; k &gt;= i + <span class="number">1</span>; --k)</span><br><span class="line">		&#123;</span><br><span class="line">			mat[n - i - <span class="number">1</span>][k] = cnt++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (k = n - i - <span class="number">1</span>; k &gt;= i + <span class="number">1</span>; --k)</span><br><span class="line">		&#123;</span><br><span class="line">			mat[k][i] = cnt++;</span><br><span class="line">		&#125;</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> x, y;<span class="comment">//输出矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (x = <span class="number">0</span>; x &lt; n; x++) &#123;</span><br><span class="line">		<span class="keyword">for</span> (y = <span class="number">0</span>; y &lt; n; y++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;%5d&quot;</span>, mat[x][y]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span>  <span class="title">Serpentine</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;<span class="comment">//n表示矩阵的阶数</span></span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> mat[<span class="number">100</span>][<span class="number">100</span>];</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">int</span> k;<span class="comment">//k表示某一个数字之前的所有数字完全横跨几条对角线 </span></span><br><span class="line">	<span class="keyword">int</span> i, j;<span class="comment">//i,j分别代表数字所在坐标的横坐标与纵坐标</span></span><br><span class="line">	<span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++)<span class="comment">//利用嵌套的for循环先写出上三角 </span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; n - i; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			k = i + j;<span class="comment">//根据观察可得，对角线的数量就等于该数横纵坐标之和</span></span><br><span class="line">			sum = k * (k + <span class="number">1</span>) / <span class="number">2</span>;<span class="comment">//求出前k条完整的对角线的最后一个数字是多少</span></span><br><span class="line">			<span class="keyword">if</span> (k % <span class="number">2</span> == <span class="number">1</span>)<span class="comment">//通多观察，之前的对角线条数根据奇偶不同，情况不同</span></span><br><span class="line">				mat[i][j] = sum + i + <span class="number">1</span>;<span class="comment">//奇加行</span></span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				mat[i][j] = sum + j + <span class="number">1</span>;<span class="comment">//偶加列</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; n; i++)<span class="comment">//通过坐标的对称以及相互中心对称数字的关系写出下三角</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (j = n - i; j &lt; n; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			mat[i][j] = n * n + <span class="number">1</span> - mat[n - i - <span class="number">1</span>][n - j - <span class="number">1</span>];<span class="comment">//相加为定值，坐标点对称</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> x, y;<span class="comment">//输出矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (x = <span class="number">0</span>; x &lt; n; x++) &#123;</span><br><span class="line">		<span class="keyword">for</span> (y = <span class="number">0</span>; y &lt; n; y++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;%5d&quot;</span>, mat[x][y]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="（七）测试数据"><a href="#（七）测试数据" class="headerlink" title="（七）测试数据"></a>（七）测试数据</h2><h3 id="初始页面："><a href="#初始页面：" class="headerlink" title="初始页面："></a>初始页面：</h3><p><img src="/images/blog10_4.png" alt="alt"></p>
+<h3 id="第一次输入螺旋矩阵："><a href="#第一次输入螺旋矩阵：" class="headerlink" title="第一次输入螺旋矩阵："></a>第一次输入螺旋矩阵：</h3><p><img src="/images/blog10_5.png" alt="alt"></p>
+<h3 id="第一次输入蛇形矩阵："><a href="#第一次输入蛇形矩阵：" class="headerlink" title="第一次输入蛇形矩阵："></a>第一次输入蛇形矩阵：</h3><p><img src="/images/blog10_6.png" alt="alt"></p>
+<h3 id="循环输入："><a href="#循环输入：" class="headerlink" title="循环输入："></a>循环输入：</h3><p><img src="/images/blog10_7.png" alt="alt"></p>
+<h2 id="（八）小结及收获体会"><a href="#（八）小结及收获体会" class="headerlink" title="（八）小结及收获体会"></a>（八）小结及收获体会</h2><p>在这次的认识问题，使用编程解决问题的过程中，我对C语言的运用有了一定的提高。编程的学习绝不仅限于书本。这一次的编程，我了解了可能在脑中只是一项很简单的需求，通过代码实现也有可能出现一些意想不到的问题。</p>
+<p>这就需要构思和编写代码的过程都需要十分严谨。我在调试的过程中遇到了很多问题。特别解决两个矩阵的核心问题中，我失败了很多次。从系统的报错甚至也难以分析出真正的错误到底在哪里。结果一行一行地读才发现：是一个大括号的错位，或者是一个等于号的缺失。更不要提在思路上卡壳的情况了。</p>
+<p>因此这就提醒我要在编程上要十分严谨地对待每一步过程。无论是编程之前写下自己的思路和步骤，还是在代码风格的把握，以及对于快捷键的使用，都需要认真学习，不断改进。</p>
+<p>同时，对于解决数学问题，一定要先把数学原理弄清楚，然后再思考如何用代码实现，和代码的哪个关系最密切。因为用编程解决数学问题，弄清数学原理是必要条件，有时候还要变换形式才能用代码来解决。这一步也很重要，因为往往和我们日常思考问题的方式有一点差异。</p>
+<p>除此之外，本次设计不仅锻炼了我的独立思考能力,也让我对于如何分析问题，解决问题有巨大的帮助。我十分珍惜这次锻炼的机会。</p>
+<h2 id="（九）参考文献"><a href="#（九）参考文献" class="headerlink" title="（九）参考文献"></a>（九）参考文献</h2><ol>
+<li>C Primer Plus（第6版）中文版 ——《中国工信出版社》《人民邮电出版社》</li>
+<li>C语言程序设计/谭浩强著（3版）——《清华大学出版社》</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://deeplower.github.io/2021/03/04/C%E8%AF%AD%E8%A8%80%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/" data-id="cklumuojz00053sgf6z0jdhe4" data-title="矩阵的构造与打印问题的分析与解决" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/03/04/C++%20STL%E2%80%94%E2%80%94vector%E4%BB%A3%E7%A0%81%E5%AE%9E%E6%93%8D/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/07/06/FOR%20LOOP%20%E7%9A%84%E7%81%B5%E6%B4%BB%E6%80%A7/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">FOR LOOP 的灵活性？</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C-Primer-Plus/">C Primer Plus</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/OJ/">OJ</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/">课程设计</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag">读书笔记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">读书笔记</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/03/04/C++%20STL%20string/">C++ STL——string</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/04/%E4%B8%93%E9%A2%98%EF%BC%9AC++%20STL/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/04/%E4%BB%80%E4%B9%88%E6%98%AFurl/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/04/%E5%A6%82%E4%BD%95%E5%BC%80%E5%90%AF%E4%B8%80%E6%AE%B5%E6%95%88%E7%8E%87%E9%AB%98%E7%9A%84%E6%97%B6%E9%97%B4%E6%AE%B5/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/04/%E6%80%8E%E4%B9%88%E5%A4%87%E8%80%83CS%E4%B8%93%E4%B8%9A%E8%AF%BE408%E2%80%94%E2%80%942021.2.28/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
