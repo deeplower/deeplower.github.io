@@ -1168,7 +1168,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #d6fbff;
+  background: #ffa48a;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2505,11 +2505,10 @@ h1 .site-title {
   color: #000;
   text-decoration: none !important;
 }
-.category-list-item:hover {
-  color: #708090;
-  text-decoration: underline;
-}
 .menu .menu-item a,
 .menu .menu-item span.exturl {
   font-size: 14px;
+}
+.tag-cloud-title {
+  display: none;
 }
