@@ -1168,7 +1168,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ffa48a;
+  background: #e477ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2472,6 +2472,7 @@ h1 .site-title {
 }
 .posts-expand .post-title-link {
   font-weight: 700;
+  color: #000 !important;
 }
 .footer {
   margin-top: 10px;
