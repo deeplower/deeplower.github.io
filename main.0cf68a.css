@@ -962,7 +962,9 @@ html {
 }
 
 .left-col #header a:hover {
-    color: #b0a0aa
+    color: #b0a0aa;
+    /* opacity: 0.5;     */
+    text-decoration: underline;
 }
 
 .left-col #header .header-subtitle {
@@ -996,9 +998,10 @@ html {
 }
 
 .left-col #header .header-menu li a {
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: 500;
     min-width: 300px;
-    line-height: 2.5;
+    line-height: 2.8;
 }
 
 .left-col #header .header-smart-menu {
@@ -1320,7 +1323,7 @@ pre .id {
     display: inline-block;
     text-decoration: none;
     font-weight: 400;
-    font-size: 10px;
+    font-size: 14px;
     color: #fff;
     height: 18px;
     line-height: 18px;
@@ -2239,9 +2242,16 @@ pre .id {
 }
 
 .article-more-link a {
-    background: #4d4d4d;
+    /* background: #4d4d4d;
     color: #fff;
     font-size: 12px;
+    padding: 5px 8px;
+    line-height: 16px;
+    border-radius: 2px;
+    transition: background .3s */
+    background: #d6d6d6;
+    color: #000000;
+    font-size: 18px;
     padding: 5px 8px;
     line-height: 16px;
     border-radius: 2px;
@@ -2249,7 +2259,7 @@ pre .id {
 }
 
 .article-more-link a:hover {
-    background: #3c3c3c
+    background: #757575
 }
 
 .article-more-link a.hidden {
@@ -2355,7 +2365,9 @@ pre .id {
 }
 
 .article-entry p {
-    margin-top: 10px
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 2;
 }
 
 .article-entry li code,
