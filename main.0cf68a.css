@@ -1,3 +1,16 @@
+.left-col {
+    /* background:#fff; */
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    url('https://bpic.588ku.com/back_pic/19/03/18/86b0583db5de678c2999af76288d142a.jpg') no-repeat 0% 20%/ cover;
+    width:300px;
+    position:fixed;
+    opacity:1;
+    transition:all .3s ease-in;
+    -ms-transition: all .3s ease-in;
+    height:100%;
+    z-index:999
+}
+
 .clearfix:after,
 .clearfix:before {
     content: "";
