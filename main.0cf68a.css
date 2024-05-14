@@ -1,16 +1,3 @@
-.left-col {
-    /* background:#fff; */
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-    url('https://bpic.588ku.com/back_pic/19/03/18/86b0583db5de678c2999af76288d142a.jpg') no-repeat 0% 20%/ cover;
-    width:300px;
-    position:fixed;
-    opacity:1;
-    transition:all .3s ease-in;
-    -ms-transition: all .3s ease-in;
-    height:100%;
-    z-index:999
-}
-
 .clearfix:after,
 .clearfix:before {
     content: "";
@@ -375,13 +362,15 @@ html {
 }
 
 body {
-    margin: 0;
-    font-size: 14px;
-    font-family: Helvetica Neue, Helvetica, STHeiTi, Arial, sans-serif;
-    line-height: 1.5;
-    color: #333;
-    background-color: #fff;
-    min-height: 100%
+    margin:0;
+    font-size:14px;
+    font-family:Helvetica Neue, Helvetica, STHeiTi, Arial, sans-serif;
+    line-height:1.5;
+    color:#333;
+    /* background-color:#fff; */
+    min-height:100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+    url('https://desk-fd.zol-img.com.cn/t_s960x600c5/g5/M00/02/00/ChMkJlbKw6KIXhXnAA4L-_oxRzUAALG6QBUSg8ADgwT181.jpg') no-repeat 0% 0%/ cover;
 }
 
 article,
@@ -942,7 +931,9 @@ html {
 }
 
 .left-col {
-    background: #fff;
+    /* background: #fff; */
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    url('https://bpic.588ku.com/back_pic/19/03/18/86b0583db5de678c2999af76288d142a.jpg') no-repeat 0% 20%/ cover;
     width: 300px;
     position: fixed;
     opacity: 1;
@@ -950,6 +941,16 @@ html {
     height: 100%;
     z-index: 999
 }
+/* .left-col {
+
+    width:300px;
+    position:fixed;
+    opacity:1;
+    transition:all .3s ease-in;
+    -ms-transition: all .3s ease-in;
+    height:100%;
+    z-index:999
+} */
 
 .left-col .overlay {
     width: 100%;
@@ -1011,11 +1012,13 @@ html {
 }
 
 .left-col #header .header-menu li a {
-    font-size: 23px;
-    font-weight: 600;
-    min-width: 300px;
-    line-height: 2.8;
-    color: #696969;
+    /* font-family: 'Times New Roman', serif; */
+    font-size: 30px;
+    font-weight: 1000;
+    /* min-width: 300px; */
+    line-height: 2.0;
+    color: rgba(48, 49, 48, 0.6);
+    text-shadow: 0.5px 0.5px 0.5px black;
 }
 
 .left-col #header .header-smart-menu {
@@ -1553,7 +1556,6 @@ pre .id {
     transition: .3s;
     text-align: center;
     color: #fff;
-    opacity: .7;
     width: 28px;
     height: 28px;
     line-height: 26px
@@ -2200,13 +2202,14 @@ pre .id {
 
 .article {
     margin: 30px;
-    position: relative;
     border: 1px solid #ddd;
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
-    background: #fff;
+    background: rgba(255,255,255,.5);
     transition: all .2s ease-in
 }
+
+
 
 .article img {
     max-width: 100%
