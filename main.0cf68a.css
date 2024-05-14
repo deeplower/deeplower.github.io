@@ -998,10 +998,11 @@ html {
 }
 
 .left-col #header .header-menu li a {
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 23px;
+    font-weight: 600;
     min-width: 300px;
     line-height: 2.8;
+    color: #696969;
 }
 
 .left-col #header .header-smart-menu {
@@ -1021,8 +1022,8 @@ html {
     display: block;
     border: 5px solid #fff;
     border-radius: 300px;
-    width: 128px;
-    height: 128px;
+    width: 180px;
+    height: 180px;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -2198,15 +2199,14 @@ pre .id {
     max-width: 100%
 }
 
-.article-inner h1.article-title,
-.article-title {
-    color: #696969;
+.article-inner h1.article-title, .article-title {
+    color: #000;
     margin-left: 0;
-    font-weight: 300;
+    font-weight: 700;
     line-height: 35px;
     margin-bottom: 20px;
-    font-size: 26px;
-    transition: color .3s
+    font-size: 40px;
+    transition: color .3s;
 }
 
 .article-header {
@@ -2249,6 +2249,7 @@ pre .id {
     line-height: 16px;
     border-radius: 2px;
     transition: background .3s */
+    display: none;
     background: #d6d6d6;
     color: #000000;
     font-size: 18px;
@@ -2355,7 +2356,11 @@ pre .id {
 
 .article-inner h1:first-child {
     margin-bottom: 10px;
-    display: inline
+    display: inline;
+    font-weight: 700;
+    font-size: 45px;
+    text-align: center;
+    color: #000;
 }
 
 .article-entry {
@@ -4311,7 +4316,7 @@ a.pswp__share--download:hover {
 .category-count {
 	text-align:center;
 	line-height:3;
-	font-size:18px;
+	font-size:30px;
 	font-weight:bold;
 }
 .category-list {
