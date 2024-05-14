@@ -2249,7 +2249,6 @@ pre .id {
     line-height: 16px;
     border-radius: 2px;
     transition: background .3s */
-    display: none;
     background: #d6d6d6;
     color: #000000;
     font-size: 18px;
@@ -2302,8 +2301,8 @@ pre .id {
 }
 
 .article-inner h2 {
-    font-size: 23px;
-    font-size: 1.4375rem;
+    font-size: 26px;
+    color: #000;
     line-height: 1.2173913043;
     margin-top: 2.4347826087em;
     margin-bottom: 1.2173913043em
@@ -2455,7 +2454,7 @@ pre .id {
 .article-entry h6 {
     margin-top: 20px;
     font-weight: 700;
-    color: #574c4c;
+    color: #000000;
     padding-bottom: 5px;
     border-bottom: 1px solid #ddd
 }
