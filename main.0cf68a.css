@@ -369,7 +369,7 @@ body {
     color: #333;
     /* background-color:#fff; */
     min-height: 100%;
-    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+    background: linear-gradient(rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0.0)),
         url('https://bizhi-cdn.antools.net/2022/03/011321OZPMH.jpg') no-repeat 0% 0%/ cover;
 }
 
@@ -932,7 +932,7 @@ html {
 
 .left-col {
     /* background:#fff; */
-    background: linear-gradient(rgba(200, 200, 200, 1), rgba(200, 200, 200, 1));
+    background: linear-gradient(rgba(200, 200, 200, 0), rgba(200, 200, 200, 0));
     width: 300px;
     position: fixed;
     opacity: 1;
@@ -1548,7 +1548,6 @@ pre .id {
     transition: .3s;
     text-align: center;
     color: #fff;
-    opacity: .7;
     width: 28px;
     height: 28px;
     line-height: 26px
@@ -2198,7 +2197,7 @@ pre .id {
     border: 1px solid #ddd;
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
-    background: rgba(255, 255, 255, .5);
+    /* background: rgba(255, 255, 255, .7); */
     transition: all .2s ease-in
 }
 
@@ -2220,7 +2219,8 @@ pre .id {
 
 .article-header {
     padding: 30px 0 15px 25px;
-    padding-left: 7.6923%
+    padding-left: 7.6923%;
+    /* background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)); */
 }
 
 .article-meta {
@@ -2290,7 +2290,8 @@ pre .id {
 }
 
 .article-inner {
-    border-color: #d1d1d1
+    border-color: #d1d1d1;
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
 }
 
 .article-inner h1 {
@@ -2363,7 +2364,8 @@ pre .id {
     line-height: 1.8em;
     font-size: 20px;
     padding-right: 7.6923%;
-    padding-left: 7.6923%
+    padding-left: 7.6923%;
+    /* background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)); */
 }
 
 .article-entry p {
