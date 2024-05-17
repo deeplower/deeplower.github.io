@@ -1420,12 +1420,16 @@ pre .id {
     margin-right: 10px;
     margin-top: 6px
 }
+.article-category {
+    background: rgba(255, 255, 255, .7);
+}
 
 .article-category,
 .article-category .article-tag-list,
 .article-tag,
 .article-tag .article-tag-list {
-    float: left
+    float: left;
+    display: none;
 }
 
 .article-category .icon,
@@ -2291,7 +2295,7 @@ pre .id {
 
 .article-inner {
     border-color: #d1d1d1;
-    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85));
 }
 
 .article-inner h1 {
@@ -3140,7 +3144,8 @@ pre .id {
 }
 
 .footer-right {
-    float: right
+    float: right;
+    display: none;
 }
 
 @media screen and (max-width:800px) {
