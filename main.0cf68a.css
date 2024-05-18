@@ -2441,6 +2441,7 @@ pre .id {
 
 .article-entry ol,
 .article-entry ul {
+    line-height: 2;
     font-size: 21px;
     margin: 10px 0
 }
