@@ -1533,6 +1533,7 @@ pre .id {
 }
 
 #header .header-nav .social {
+    margin-bottom: 40px;
     margin-top: 10px;
     text-align: center;
     display: -webkit-box;
