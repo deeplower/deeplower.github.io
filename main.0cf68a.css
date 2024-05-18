@@ -2383,6 +2383,7 @@ pre .id {
     line-height: 2;
     font-size: 21px;
     margin-top: 10px;
+    margin-bottom: 10px;
     /* font-family: monospace; */
 }
 
@@ -2440,7 +2441,7 @@ pre .id {
 
 .article-entry ol,
 .article-entry ul {
-    font-size: 14px;
+    font-size: 21px;
     margin: 10px 0
 }
 

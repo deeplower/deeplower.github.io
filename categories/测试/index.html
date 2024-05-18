@@ -223,7 +223,29 @@
         ></a>
         
       </div>
+      <style>
+        /* 添加的 CSS 代码 */
+        .opacity-slider input[type="range"] {
+          /* 修改滑块样式 */
+          -webkit-appearance: none;
+          appearance: none;
+          background-color: #ddd;
+          border-radius: 5px;
+          margin-top: 5px; /* 调整滑块轨道的位置 */
+          /* 设置滑块轨道的样式 */
+          height: 8px;
+        }
 
+        .opacity-slider input[type="range"]::-webkit-slider-thumb {
+          /* 修改滑块按钮的样式 */
+          -webkit-appearance: none;
+          appearance: none;
+          width: 20px;
+          height: 20px;
+          background-color: gray; /* Chrome, Safari, Opera */
+          border-radius: 50%;
+        }
+      </style>
       <!-- 添加调节透明度的模块 -->
       <div class="opacity-slider">
         <label for="opacity" style="font-family: monospace; color: white"
@@ -236,12 +258,7 @@
           step="0.1"
           value="1"
           id="opacity"
-          style="
-            width: 100%;
-            background-color: #ddd;
-            border-radius: 5px;
-            margin-top: 5px;
-          "
+          style="background-color: #ddd; border-radius: 5px; margin-top: 5px"
         />
       </div>
     </nav>
@@ -267,15 +284,15 @@
         // 获取所有的 article-inner 模块
         var articleInners = document.querySelectorAll(".article-inner");
         var categoryMenus = document.querySelectorAll(".category-menu-inner");
-    
+
         // 保存 this 到变量 that
         var that = this;
-    
+
         // 设置所有 article-inner 模块的透明度
         articleInners.forEach(function (articleInner) {
           articleInner.style.opacity = that.value;
         });
-    
+
         // 设置所有 category-menu-inner 模块的透明度
         categoryMenus.forEach(function (categoryMenu) {
           categoryMenu.style.opacity = that.value;
