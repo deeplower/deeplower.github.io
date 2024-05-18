@@ -1012,6 +1012,10 @@ html {
     line-height: 3;
 }
 
+.left-col #header .header-menu li a:hover {
+    opacity: 0.7;
+}
+
 
 .left-col #header .header-smart-menu {
     font-size: 12px;
@@ -2219,6 +2223,13 @@ pre .id {
     margin-bottom: 20px;
     font-size: 40px;
     transition: color .3s;
+    font-family: monospace;
+}
+
+.article-inner h1.article-title,
+.article-title:hover {
+    color:#696969;
+    opacity: 0.8;
 }
 
 .article-header {
@@ -2373,8 +2384,10 @@ pre .id {
 }
 
 .article-entry p {
-    font-size: 18px;
-    margin-top: 10px
+    line-height: 2;
+    font-size: 21px;
+    margin-top: 10px;
+    /* font-family: monospace; */
 }
 
 .article-entry li code,
