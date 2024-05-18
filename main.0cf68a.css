@@ -1004,7 +1004,7 @@ html {
 }
 
 .left-col #header .header-menu li a {
-    color: #696969;
+    color: #000000;
     font-size: 24px;
     /* font-family: monospace; */
     font-family: monospace;
@@ -1014,7 +1014,7 @@ html {
 }
 
 .left-col #header .header-menu li a:hover {
-    opacity: 0.7;
+    opacity: 0.6;
 }
 
 
@@ -1550,9 +1550,9 @@ pre .id {
     display: -moz-inline-stack;
     display: inline-block;
     vertical-align: middle;
-    *vertical-align: auto;
+    /* *vertical-align: auto; */
     zoom: 1;
-    *display: inline;
+    /* *display: inline; */
     margin: 0 8px 15px;
     transition: .3s;
     text-align: center;
@@ -2203,10 +2203,6 @@ pre .id {
 
 .article {
     margin: 30px;
-    border: 1px solid #ddd;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    /* background: rgba(255, 255, 255, .7); */
     transition: all .2s ease-in
 }
 
@@ -2305,7 +2301,7 @@ pre .id {
 
 .article-inner {
     border-color: #d1d1d1;
-    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85));
+    background: linear-gradient(rgba(255, 255, 255, 1.0), rgba(255, 255, 255, 1.0));
 }
 
 .article-inner h1 {
