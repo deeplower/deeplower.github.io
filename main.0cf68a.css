@@ -2235,10 +2235,8 @@ pre .id {
 
 .article-header {
     padding: 30px 0 15px 25px;
-    padding-left: 7.6923%;
-    /* background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)); */
+    padding-left: 7%;
 }
-
 .article-meta {
     width: 150px;
     font-size: 14;
