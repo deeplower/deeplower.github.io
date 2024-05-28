@@ -6,17 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>文章分类 | 颔首</title>
+  <title>Keil 5 STM32 编写准备工作 | 颔首</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="文章分类">
-<meta property="og:url" content="http://example.com/categories/index.html">
+  <meta name="description" content="Keil 5 STM32 编写准备工作   新建工程时，keil5会自动创建以下文件，其他提到的文件夹需要在此目录下自己新建">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Keil 5 STM32 编写准备工作">
+<meta property="og:url" content="http://example.com/2024/05/28/05-Keil5MDK%E5%88%9B%E5%BB%BASTM32%E5%B7%A5%E7%A8%8B%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/index.html">
 <meta property="og:site_name" content="颔首">
+<meta property="og:description" content="Keil 5 STM32 编写准备工作   新建工程时，keil5会自动创建以下文件，其他提到的文件夹需要在此目录下自己新建">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2019-08-19T03:48:35.000Z">
-<meta property="article:modified_time" content="2024-05-16T14:01:41.249Z">
+<meta property="og:image" content="http://example.com/2024/05/28/05-Keil5MDK%E5%88%9B%E5%BB%BASTM32%E5%B7%A5%E7%A8%8B%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/%E6%96%87%E4%BB%B6%E5%A4%B9%E8%AF%B4%E6%98%8E.assets/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240528222629.png">
+<meta property="og:image" content="http://example.com/2024/05/28/05-Keil5MDK%E5%88%9B%E5%BB%BASTM32%E5%B7%A5%E7%A8%8B%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/%E6%96%87%E4%BB%B6%E5%A4%B9%E8%AF%B4%E6%98%8E.assets/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240528222647.png">
+<meta property="og:image" content="http://example.com/2024/05/28/05-Keil5MDK%E5%88%9B%E5%BB%BASTM32%E5%B7%A5%E7%A8%8B%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/%E6%96%87%E4%BB%B6%E5%A4%B9%E8%AF%B4%E6%98%8E.assets/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240528222652.png">
+<meta property="article:published_time" content="2024-05-28T14:10:20.000Z">
+<meta property="article:modified_time" content="2024-05-28T14:34:20.230Z">
 <meta property="article:author" content="DEEPLOWER">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2024/05/28/05-Keil5MDK%E5%88%9B%E5%BB%BASTM32%E5%B7%A5%E7%A8%8B%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/%E6%96%87%E4%BB%B6%E5%A4%B9%E8%AF%B4%E6%98%8E.assets/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240528222629.png">
   
     <link rel="alternative" href="/atom.xml" title="颔首" type="application/atom+xml">
   
@@ -248,154 +254,179 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article class="article category-menu-inner">
-  <h3
-    class="category-count"
-    style="font-size: 32px; text-align: center; font-weight: 900"
-  >
-    文章分类<!-- 4 -->
-  </h3>
-  <style>
-    .article {
-      background-color: rgba(255, 255, 255, 1.0); /* 白色背景，透明度为0.7 */
-      padding: 20px; /* 可以根据需要调整内边距 */
-    }
-    .category-menu {
-      margin: 0 auto;
-      width: 80%; /* 这里可以根据需要调整宽度 */
-    }
-    .category-list {
-      list-style-type: none;
-      padding-left: 0;
-      text-align: start;
-    }
-    .category-item {
-      margin-bottom: 10px; /* 间距可以根据需要调整 */
-    }
-    .category-name {
-      font-size: 26px;
-      font-weight: bold;
-    }
-    .post-list {
-      list-style-type: none;
-      padding-left: 20px; /* 这里可以根据需要调整缩进 */
-    }
-    .post-item {
-      margin-bottom: 5px; /* 间距可以根据需要调整 */
-    }
-    .post-link {
-      display: inline-block;
-      vertical-align: middle;
-      font-size: 20px;
-    }
-    .bullet {
-      display: inline-block;
-      width: 10px; /* 调整项目符号的宽度 */
-      text-align: center;
-    }
-  </style>
-
-  <div class="category-menu">
-    <ul class="category-list">
-      
-      <li class="category-item">
-        <span class="category-name">学习</span>
-        
-        <ul class="post-list">
-          
-          <li class="post-item">
-            <span class="bullet">&#8226;</span>
-            <a
-              href="/2024/05/14/04_项目_实现对电池输出功率的远程监测/"
-              class="post-link"
-              title="电池功率远程监测"
-            >
-              电池功率远程监测
-            </a>
-          </li>
-          
-          <li class="post-item">
-            <span class="bullet">&#8226;</span>
-            <a
-              href="/2024/05/28/05-Keil5MDK创建STM32工程的准备工作/"
-              class="post-link"
-              title="Keil 5 STM32 编写准备工作"
-            >
-              Keil 5 STM32 编写准备工作
-            </a>
-          </li>
-          
-        </ul>
-        
-      </li>
-      
-      <li class="category-item">
-        <span class="category-name">思考</span>
-        
-        <ul class="post-list">
-          
-          <li class="post-item">
-            <span class="bullet">&#8226;</span>
-            <a
-              href="/2020/10/14/02-情节炸弹/"
-              class="post-link"
-              title="从“双子玩法”到情节炸弹"
-            >
-              从“双子玩法”到情节炸弹
-            </a>
-          </li>
-          
-        </ul>
-        
-      </li>
-      
-      <li class="category-item">
-        <span class="category-name">测试</span>
-        
-        <ul class="post-list">
-          
-          <li class="post-item">
-            <span class="bullet">&#8226;</span>
-            <a
-              href="/2020/10/13/01-当在围棋的玩法里面设置“炸弹”（测试文章）/"
-              class="post-link"
-              title="当在围棋的玩法里面设置“炸弹”"
-            >
-              当在围棋的玩法里面设置“炸弹”
-            </a>
-          </li>
-          
-        </ul>
-        
-      </li>
-      
-      <li class="category-item">
-        <span class="category-name">转载</span>
-        
-        <ul class="post-list">
-          
-          <li class="post-item">
-            <span class="bullet">&#8226;</span>
-            <a
-              href="/2020/10/15/03-做无益目标的事是在浪费时间吗/"
-              class="post-link"
-              title="做无益目标的事是在浪费时间吗"
-            >
-              做无益目标的事是在浪费时间吗
-            </a>
-          </li>
-          
-        </ul>
-        
-      </li>
-      
-    </ul>
-  </div>
-
-  <div class="tag-cloud">
+            <article id="post-05-Keil5MDK创建STM32工程的准备工作" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Keil 5 STM32 编写准备工作
+    </h1>
+  
+
+        
+        <a href="/2024/05/28/05-Keil5MDK%E5%88%9B%E5%BB%BASTM32%E5%B7%A5%E7%A8%8B%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/" class="archive-article-date">
+  	<time datetime="2024-05-28T14:10:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-05-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1>Keil 5 STM32 编写准备工作</h1>
+<ul>
+<li>
+<p>新建工程时，keil5会自动创建以下文件，其他提到的文件夹需要在此目录下自己新建</p>
+<span id="more"></span>
+<p><img src="./%E6%96%87%E4%BB%B6%E5%A4%B9%E8%AF%B4%E6%98%8E.assets/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240528222629.png" alt="微信图片_20240528222629"></p>
+</li>
+<li>
+<p>Library文件夹里面包含的46个文件，其中23个是库函数的源文件，23个是库函数的头文件。这些文件不需要修改</p>
+<ul>
+<li>
+<p>这23个文件名称相同，源文件的后缀是.c，头文件的后缀是.h</p>
+</li>
+<li>
+<p>misc是内核的库函数，其他的是外设库函数</p>
+</li>
+<li>
+<p>文件的路径：</p>
+<p>固件库-&gt;STM32F10x_StdPeriph_Lib_V3.5.0-&gt;Libraries-&gt;STM32F10x_StdPeriph_Driver-&gt;inc(头文件)、src（源文件）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Start文件夹（工程里）里面包含6个文件，是启动文件。这些文件不需要修改</p>
+<ul>
+<li>
+<p>Start文件夹中存放的不止这些文件，但是只添加了这些文件到工程中</p>
+</li>
+<li>
+<p>Start文件夹中有13个文件，分别是</p>
+<blockquote>
+<ol>
+<li>GUJIANKU\STM32F10x_StdPeriph_Lib_V3.5.0\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm中的所有文件（8个）</li>
+<li>GUJIANKU\STM32F10x_StdPeriph_Lib_V3.5.0\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x中的所有.c、.h后缀的文件（3个）</li>
+<li>固件库\STM32F10x_StdPeriph_Lib_V3.5.0\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\CMSIS\CM3\CoreSupport（2个）</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="./%E6%96%87%E4%BB%B6%E5%A4%B9%E8%AF%B4%E6%98%8E.assets/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240528222647.png" alt="微信图片_20240528222647"></p>
+<p><img src="./%E6%96%87%E4%BB%B6%E5%A4%B9%E8%AF%B4%E6%98%8E.assets/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240528222652.png" alt="微信图片_20240528222652"></p>
+<ul>
+<li>User文件夹是我们重点关注的文件夹，经常修改
+<ul>
+<li>User文件夹往往有main.c这一文件，这是我们程序的主逻辑，经常修改，可用外置编辑器打开并编辑</li>
+<li>库函数刚刚添加完往往不能直接使用，需要添加一个configuration文件（stm32f10x_conf.h）用来配置库函数头文件的包含关系，另外还有用来参数检查的函数定义（这是所有库函数都需要的）</li>
+<li>还需要添加两个interrupt文件(stm32f10x_it.c、stm32f10x_it.h)用来存放中断函数</li>
+<li>这些文件的路径是</li>
+</ul>
+</li>
+</ul>
+<p>​		固件库-&gt;STM32F10x_StdPeriph_Lib_V3.5.0-&gt;Project-&gt;STM32F10x_StdPeriph_Template</p>
+<ul>
+<li>创建工程的其他操作
+<ul>
+<li>工程选项上添加文件夹的头文件路径
+<ul>
+<li>魔术棒-&gt;C/C+±&gt;IncludePaths-&gt;点击右边三个点的按钮-&gt;右上角4个按钮最左边的按钮点击，新建路径-&gt;点击右边三个点的按钮把Start、User、Library文件夹的路径添加进来</li>
+</ul>
+</li>
+<li>配置调试器
+<ul>
+<li>魔术棒-&gt;Debug-&gt;右半边的Use左边的圆点选中-&gt;选择ST-Link Debugger-&gt;选择Settings-&gt;Flash Download-&gt;reset and run选中</li>
+</ul>
+</li>
+<li>添加main.c文件的时候记得把Location改成User文件夹</li>
+<li>插入头文件可以右键insert</li>
+<li>文件的最后一行必须是空行</li>
+<li>添加宏定义（添加之后才能包含标准外设库，也就是库函数）
+<ul>
+<li>在头文件右键</li>
+<li>打开文件</li>
+<li>滑倒最下面看到#ifdef语句，这是一个条件编译语句</li>
+<li>复制#ifdef后面的字符串</li>
+<li>魔术棒-&gt;C/C+±&gt;Define栏粘贴字符串</li>
+</ul>
+</li>
+<li>点击魔术棒右边的箱子一样的按钮，可以调剂菜单栏中不同文件夹的前后顺序，一般是把User文件夹放在最后</li>
+<li>在工程里新建文件夹的操作和物理上的操作是独立的</li>
+</ul>
+</li>
+</ul>
+
+      
+
+      <!--  -->
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/学习//" class="article-tag-list-link color3">学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2024/05/14/04_%E9%A1%B9%E7%9B%AE_%E5%AE%9E%E7%8E%B0%E5%AF%B9%E7%94%B5%E6%B1%A0%E8%BE%93%E5%87%BA%E5%8A%9F%E7%8E%87%E7%9A%84%E8%BF%9C%E7%A8%8B%E7%9B%91%E6%B5%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">电池功率远程监测</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+
+  
+
+  
+
+  
+
 
           </div>
         </div>
@@ -417,7 +448,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
