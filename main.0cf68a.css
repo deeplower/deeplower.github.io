@@ -371,7 +371,13 @@ body {
     min-height: 100%;
     background: linear-gradient(rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0.0)),
         url('https://bizhi-cdn.antools.net/2022/03/011321OZPMH.jpg') no-repeat 0% 0%/ cover;
+        /*修改1*/
+    /* background-color: #696969; */
 }
+/*修改2*/
+/* #header .header-nav{
+    display: none;
+} */
 
 article,
 aside,
@@ -996,7 +1002,7 @@ html {
     display: -webkit-box;
     -webkit-box-orient: horizontal;
     -webkit-box-pack: center;
-    -webkit-box-align: center
+    -webkit-box-align: center;
 }
 
 .left-col #header .header-menu li {
@@ -1005,17 +1011,19 @@ html {
 
 .left-col #header .header-menu li a {
     color: #000000;
-    font-size: 24px;
+    font-size: 26px;
     /* font-family: monospace; */
-    font-family: Noto Serif SC;
-    font-weight: 200;
+    /* font-family: Noto Serif SC; */
+    font-family: cursive;
+    font-weight: 800;
     /* min-width: 300px; */
     line-height: 2.5;
+    font-size: 30px;
 }
 
 .left-col #header .header-menu li a:hover {
     opacity: 0.6;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 
@@ -1222,8 +1230,8 @@ html {
 }
 
 .article-entry .highlight .line {
-    color: #fff;
-    min-height: 19px
+    color: #83a2ff;
+    min-height: 19px;
 }
 
 .article-entry .gist {
@@ -1288,7 +1296,7 @@ pre .comment {
 pre .class .params,
 pre .function .keyword,
 pre .keyword {
-    color: #66d9ef
+    color: #fbbb57;
 }
 
 pre .css .value,
@@ -1296,7 +1304,7 @@ pre .doctype,
 pre .function,
 pre .params,
 pre .tag {
-    color: #fff
+    color: #f50;
 }
 
 pre .at_rule,
@@ -1313,16 +1321,16 @@ pre .built_in,
 pre .class,
 pre .css~* .class,
 pre .function .title {
-    color: #a6e22e
+    color: #e22eba
 }
 
 pre .string,
 pre .value {
-    color: #e6db74
+    color: #e67474
 }
 
 pre .number {
-    color: #7163d7
+    color: #d7ba63
 }
 
 pre .css~* .id,
@@ -1426,6 +1434,7 @@ pre .id {
     margin-right: 10px;
     margin-top: 6px
 }
+
 .article-category {
     background: rgba(255, 255, 255, .7);
 }
@@ -1453,7 +1462,8 @@ pre .id {
 .archive-article-date {
     color: #999;
     margin-right: 7.6923%;
-    float: right
+    float: right;
+    font-family: times;
 }
 
 .archive-article-date .icon {
@@ -2205,7 +2215,8 @@ pre .id {
 
 .article {
     margin: 30px;
-    transition: all .2s ease-in
+    transition: all .2s ease-in;
+    border-radius: 40px;
 }
 
 
@@ -2216,18 +2227,20 @@ pre .id {
 .article-inner h1.article-title,
 .article-title {
     color: #000;
-    margin-left: 0;
+    margin-left: 6px;
     font-weight: 700;
     line-height: 35px;
     margin-bottom: 20px;
     font-size: 40px;
     transition: color .3s;
-    font-family: monospace;
+    /* font-family: monospace; */
+    font-family: times, fangsong;
+    /* font-family: cursive; */
 }
 
 .article-inner h1.article-title,
 .article-title:hover {
-    color:#696969;
+    color: #696969;
     opacity: 0.8;
 }
 
@@ -2235,6 +2248,7 @@ pre .id {
     padding: 30px 0 15px 25px;
     padding-left: 7%;
 }
+
 .article-meta {
     width: 150px;
     font-size: 14;
@@ -2304,6 +2318,7 @@ pre .id {
 .article-inner {
     border-color: #d1d1d1;
     background: linear-gradient(rgba(255, 255, 255, 1.0), rgba(255, 255, 255, 1.0));
+    border-radius: 40px;
 }
 
 .article-inner h1 {
@@ -2315,7 +2330,7 @@ pre .id {
 }
 
 .article-inner h2 {
-    font-size: 23px;
+    font-size: 26px;
     font-size: 1.4375rem;
     line-height: 1.2173913043;
     margin-top: 2.4347826087em;
@@ -2323,7 +2338,7 @@ pre .id {
 }
 
 .article-inner h3 {
-    font-size: 19px;
+    font-size: 100px;
     font-size: 1.1875rem;
     line-height: 1.1052631579;
     margin-top: 2.9473684211em;
@@ -2341,8 +2356,9 @@ pre .id {
 }
 
 .article-inner h4 {
-    letter-spacing: .140625em;
-    text-transform: uppercase
+    /* letter-spacing: .140625em; */
+    text-transform: uppercase;
+    font-size: 23px;
 }
 
 .article-inner h6 {
@@ -2370,7 +2386,7 @@ pre .id {
 .article-inner h1:first-child {
     margin-bottom: 10px;
     display: inline;
-    color:#000;
+    color: #000;
 }
 
 .article-entry {
@@ -2378,6 +2394,8 @@ pre .id {
     font-size: 20px;
     padding-right: 7.6923%;
     padding-left: 7.6923%;
+    /* font-family: times; */
+    font-family: times;
     /* background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)); */
 }
 
@@ -2391,13 +2409,14 @@ pre .id {
 
 .article-entry li code,
 .article-entry p code {
-    padding: 1px 3px;
+    /* padding: 1px 3px;
     margin: 0 3px;
     background: #ddd;
     border: 1px solid #ccc;
     font-family: Menlo, Monaco, Andale Mono, lucida console, Courier New, monospace;
     word-wrap: break-word;
-    font-size: 14px
+    font-size: 14px */
+    font-family: times;
 }
 
 .article-entry blockquote {
@@ -2428,7 +2447,7 @@ pre .id {
     display: inline-block;
     margin-right: 10px;
     float: left;
-    margin-top: 10px
+    margin-top: 17px;
 }
 
 .article-entry ol {
@@ -2445,7 +2464,7 @@ pre .id {
 .article-entry ul {
     line-height: 2;
     font-size: 21px;
-    margin: 10px 0
+    /* margin: 10px 0 */
 }
 
 .article-entry li ol,
@@ -2472,7 +2491,8 @@ pre .id {
     font-weight: 700;
     color: #574c4c;
     padding-bottom: 5px;
-    border-bottom: 1px solid #ddd
+    border-bottom: 1px solid #ddd;
+    font-size: 26px;
 }
 
 .article-entry video {
@@ -2504,14 +2524,15 @@ pre .id {
     margin-top: 10px;
     padding: 5px 15px;
     overflow-x: auto;
-    color: #657b83;
+    /* color: #657b83; */
     border: 1px solid #ccc;
-    text-shadow: 0 1px #444;
-    font-family: Menlo, Monaco, Andale Mono, lucida console, Courier New, monospace
+    /* text-shadow: 0 1px #444; */
+    font-family: consolas;
+    font-size: 20px;
 }
 
 .article-entry pre code {
-    font-size: 14px
+    font-size: 20px
 }
 
 .article-entry table {
@@ -2563,7 +2584,8 @@ pre .id {
 #article-nav .article-nav-link-wrap .article-nav-title {
     display: inline-block;
     font-size: 16px;
-    transition: color .3s
+    transition: color .3s;
+    color: white;
 }
 
 #article-nav .article-nav-link-wrap:hover .article-nav-title,
@@ -3160,7 +3182,7 @@ pre .id {
     float: right;
     display: none;
 }
-
+/*移动*/
 @media screen and (max-width:800px) {
 
     #container,
@@ -3168,7 +3190,8 @@ pre .id {
     html {
         height: auto;
         overflow-x: hidden;
-        overflow-y: auto
+        overflow-y: auto;
+        background-color: #696969;
     }
 
     #mobile-nav {
@@ -3177,6 +3200,33 @@ pre .id {
 
     .body-wrap {
         margin-bottom: 0
+    }
+
+    .article-inner {
+        border-radius: 0px;
+        padding: 20px;
+    }
+
+    .article-inner h1.article-title, .article-title{
+        font-size: 26px !important;
+        font-family: times;
+        margin-left: 10px !important;
+    }
+
+    .archive-article-date{
+        margin-left: 10px !important;
+    }
+
+    .article-entry p{
+        margin-left: 10px !important;
+    }
+
+    .article-more-link a{
+        font-size: 11px;
+        /* color:#000; */
+        margin-right: 10px !important;
+        margin-bottom: 40px !important;
+        /* background-color: #fff; */
     }
 
     .left-col {
@@ -3283,6 +3333,7 @@ pre .id {
     }
 
     .btnctn .slider-trigger .icon {
+        display: none;
         font-size: 24px;
         color: #fff
     }
