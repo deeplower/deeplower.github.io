@@ -1803,7 +1803,8 @@ pre .id {
 .archives-wrap .archive-year-wrap a {
     color: #666;
     font-weight: 700;
-    padding-left: 48px
+    padding-left: 48px;
+    font-family: times;
 }
 
 .archives {
@@ -1831,9 +1832,10 @@ pre .id {
 }
 
 .archives .archive-article-title {
-    font-size: 16px;
+    font-size: 26px;
     color: #333;
-    transition: color .3s
+    transition: color .3s;
+    font-family: times, cursive;
 }
 
 .archives .archive-article-title:hover {
@@ -2261,7 +2263,8 @@ pre .id {
 }
 
 .article-meta time {
-    color: #aaa
+    color: #aaa;
+    font-size: 20px;
 }
 
 .article-meta time .icon-clock {
