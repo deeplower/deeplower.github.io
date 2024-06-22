@@ -16,7 +16,7 @@
 <meta property="og:description" content="0-1 开始 第一步 欢迎来到HDLBits! 对于数字逻辑的入门，一开始可能比较困难。因为你需要学习新的概念，一种新的语言（硬件描述语言，Hardware Description Language）例如Verilog，一些新的软件包，通常还需要FPGA开发板。这些新内容的学习几乎是同时进行的。而HDLBits只需要简单点击一下“仿真”（Simulate）按钮，就可以设计、调试简单电路。 设计一个">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-06-03T14:10:20.000Z">
-<meta property="article:modified_time" content="2024-06-14T09:46:22.010Z">
+<meta property="article:modified_time" content="2024-06-22T14:16:10.308Z">
 <meta property="article:author" content="DEEPLOWER">
 <meta name="twitter:card" content="summary">
   
@@ -330,7 +330,7 @@
 <figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">module</span> top_module ( <span class="keyword">output</span> zero ); </span><br><span class="line">    <span class="comment">// Verilog-2001</span></span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <h3 id="模块声明-2">模块声明</h3>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">module top_module( output one );</span><br></pre></td></tr></table></figure>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">module</span> top_module( <span class="keyword">output</span> one );</span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
 <p>提示：有趣的事实，Quartus 综合时，不给信号赋值通常会导致信号为 0。</p>
