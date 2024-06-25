@@ -2582,7 +2582,8 @@ pre .id {
 }
 
 #article-nav .article-nav-link-wrap {
-    font-size: 14px
+    font-size: 14px;
+    font-family: times;
 }
 
 #article-nav .article-nav-link-wrap .article-nav-title {
