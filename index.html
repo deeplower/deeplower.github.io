@@ -248,6 +248,113 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-11-Typora设置字体颜色的方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/06/26/11-Typora%E8%AE%BE%E7%BD%AE%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2%E7%9A%84%E6%96%B9%E6%B3%95/">Typora设置字体颜色的方法</a>
+    </h1>
+  
+
+        
+        <a href="/2024/06/26/11-Typora%E8%AE%BE%E7%BD%AE%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2%E7%9A%84%E6%96%B9%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2024-06-25T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-06-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>AutoHotKey</strong>是一款著名的windows系统快捷键设置的软件，轻便小巧。</p>
+<ul>
+<li>官方下载地址： <a target="_blank" rel="noopener" href="https://autohotkey.com/download/ahk-install.exe">https://autohotkey.com/download/ahk-install.exe</a></li>
+</ul>
+<p>使用步骤如下：</p>
+<ul>
+<li>
+<p>先安装AutoHotKey</p>
+</li>
+<li>
+<p>打开记事本，把下面的内容复制粘贴进去：</p>
+</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">; Typora</span><br><span class="line">; 快捷增加字体颜色</span><br><span class="line">; SendInput &#123;Text&#125; 解决中文输入法问题</span><br><span class="line"></span><br><span class="line">#IfWinActive ahk_exe Typora.exe</span><br><span class="line">&#123;</span><br><span class="line">    ; Ctrl+Alt+O 橙色</span><br><span class="line">    ^!o::addFontColor(<span class="string">&quot;orange&quot;</span>)</span><br><span class="line"></span><br><span class="line">    ; Ctrl+Alt+R 红色</span><br><span class="line">    ^!r::addFontColor(<span class="string">&quot;red&quot;</span>)</span><br><span class="line">     </span><br><span class="line">    ; Ctrl+Alt+B 浅蓝色</span><br><span class="line">    ^!b::addFontColor(<span class="string">&quot;cornflowerblue&quot;</span>)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">; 快捷增加字体颜色</span><br><span class="line">addFontColor(color)&#123;</span><br><span class="line">    clipboard := <span class="string">&quot;&quot;</span> ; 清空剪切板</span><br><span class="line">    Send &#123;ctrl down&#125;c&#123;ctrl up&#125; ; 复制</span><br><span class="line">    SendInput &#123;TEXT&#125;&lt;font color=<span class="string">&#x27;%color%&#x27;</span>&gt;</span><br><span class="line">    SendInput &#123;ctrl down&#125;v&#123;ctrl up&#125; ; 粘贴</span><br><span class="line">    If(clipboard = <span class="string">&quot;&quot;</span>)&#123;</span><br><span class="line">        SendInput &#123;TEXT&#125;&lt;/font&gt; ; Typora 在这不会自动补充</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        SendInput &#123;TEXT&#125;&lt;/ ; Typora中自动补全标签</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p>将文件保存为ahk后缀的文件，如AutoHotKey.ahk，双击运行</p>
+</li>
+<li>
+<p>在Typora软件里就可以使用快捷键进行想要的修改操作了（想要更多的快捷键设置方式，可以在AutoHotKey.ahk文件中自行添加）：</p>
+</li>
+<li>
+<p>如按 Ctrl+Alt+O 添加橙色，Ctrl+Alt+R 红色，按 Ctrl+\ 取消样式！</p>
+</li>
+<li>
+<p>也可以右键 AutoHotKey.ahk 脚本文件，点击Compile Script编译脚本成exe程序，就可以不用下载Autohotkey在其他电脑上运行了。</p>
+</li>
+<li>
+<p>提示：上面脚本只写了橙色、红色、浅蓝三种颜色，你可以按需照例增加其他颜色或快捷方式！<br>
+————————————————</p>
+<p>版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。</p>
+</li>
+</ul>
+<p>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/liulei952413829/article/details/114670380">https://blog.csdn.net/liulei952413829/article/details/114670380</a></p>
+
+      
+
+      <!--  -->
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/软件使用//" class="article-tag-list-link color5">软件使用</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2024/06/26/11-Typora%E8%AE%BE%E7%BD%AE%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2%E7%9A%84%E6%96%B9%E6%B3%95/">展开</a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-10-20240625小结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -662,7 +769,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/学习记录//" class="article-tag-list-link color5">学习记录</a>
+        			<a href="/categories/软件使用//" class="article-tag-list-link color5">软件使用</a>
         		</li>
       		
 		</ul>
@@ -924,80 +1031,10 @@
 
 
   
-    <article id="post-01-当在围棋的玩法里面设置“炸弹”（测试文章）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/13/01-%E5%BD%93%E5%9C%A8%E5%9B%B4%E6%A3%8B%E7%9A%84%E7%8E%A9%E6%B3%95%E9%87%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE%E2%80%9C%E7%82%B8%E5%BC%B9%E2%80%9D%EF%BC%88%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0%EF%BC%89/">当在围棋的玩法里面设置“炸弹”</a>
-    </h1>
-  
-
-        
-        <a href="/2020/10/13/01-%E5%BD%93%E5%9C%A8%E5%9B%B4%E6%A3%8B%E7%9A%84%E7%8E%A9%E6%B3%95%E9%87%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE%E2%80%9C%E7%82%B8%E5%BC%B9%E2%80%9D%EF%BC%88%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-10-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>围棋的基本规则是一方执黑先行，另一方执白，一次落一子，最后看谁围空多。问题就出在这个一次落一子上：如果修改规则，让黑白双方每次都可以下两个子，那么会有什么不同呢？</p>
-        
-      
-
-      <!--  -->
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/随笔//" class="article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/10/13/01-%E5%BD%93%E5%9C%A8%E5%9B%B4%E6%A3%8B%E7%9A%84%E7%8E%A9%E6%B3%95%E9%87%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE%E2%80%9C%E7%82%B8%E5%BC%B9%E2%80%9D%EF%BC%88%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0%EF%BC%89/">展开</a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
