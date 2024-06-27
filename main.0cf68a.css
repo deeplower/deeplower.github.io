@@ -1305,7 +1305,7 @@ pre .doctype,
 pre .function,
 pre .params,
 pre .tag {
-    color: #f50;
+    color: #5281bf;
 }
 
 pre .at_rule,
@@ -1322,12 +1322,12 @@ pre .built_in,
 pre .class,
 pre .css~* .class,
 pre .function .title {
-    color: #e22eba
+    color: #f9a255
 }
 
 pre .string,
 pre .value {
-    color: #e67474
+    color: #ad7a7a
 }
 
 pre .number {
