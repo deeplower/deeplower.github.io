@@ -41,224 +41,160 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="intrude-less">
-  <header id="header" class="inner">
-    <a href="/" class="profilepic" style="margin-left: 45px">
-      <img src="/img/avatar.jpg" class="js-avatar" />
-    </a>
-    <button id="toggle-background">背景切换</button>
-    <style>
-      .header-menu-container {
-        max-width: 80px; /* 最大宽度 */
-        margin: 0 auto; /* 水平居中 */
-      }
-      .header-menu {
-        border-radius: 20px; /* 圆角半径 */
-        background-color: #ffffff; /* 背景色 */
-        padding: 10px; /* 内边距 */
-      }
-    </style>
-    <div class="header-menu-container" style="margin: 0 auto">
-      <nav class="header-menu">
-        <ul>
-          
-          <li><a href="/">主页</a></li>
-          
-          <li><a href="/categories">分类</a></li>
-          
-          <li><a href="/about">关于</a></li>
-          
-        </ul>
-      </nav>
-    </div>
-    <nav class="header-nav" style="margin: 0 auto">
-      <div class="social" style="margin-left: -10px">
-        
-        <a
-          class="rss"
-          target="_blank"
-          href="https://www.x-mol.com/groups/hong_zhanyong/people"
-          title="rss"
-          ><i class="icon-rss"></i
-        ></a>
-        
-        <a
-          class="mail"
-          target="_blank"
-          href="mailto:deeplower@163.com"
-          title="mail"
-          ><i class="icon-mail"></i
-        ></a>
-        
-        <a
-          class="bilibili"
-          target="_blank"
-          href="https://space.bilibili.com/483390739"
-          title="bilibili"
-          ><i class="icon-bilibili"></i
-        ></a>
-        
-      </div>
+  <div class="intrude-less">
+    <header id="header" class="inner">
+      <a href="/" class="profilepic" style="margin-left: 45px">
+        <img src="/img/avatar.jpg" class="js-avatar" />
+      </a>
       <style>
-        /* 添加的 CSS 代码 */
-        .opacity-slider input[type="range"] {
-          /* 修改滑块样式 */
-          -webkit-appearance: none;
-          appearance: none;
-          background-color: #ddd;
-          border-radius: 5px;
-          margin-top: 5px; /* 调整滑块轨道的位置 */
-          /* 设置滑块轨道的样式 */
-          height: 8px;
+        .header-menu-container {
+          max-width: 80px;
+          /* 最大宽度 */
+          margin: 0 auto;
+          /* 水平居中 */
         }
 
-        .opacity-slider input[type="range"]::-webkit-slider-thumb {
-          /* 修改滑块按钮的样式 */
-          -webkit-appearance: none;
-          appearance: none;
-          width: 20px;
-          height: 20px;
-          background-color: gray; /* Chrome, Safari, Opera */
-          border-radius: 50%;
+        .header-menu {
+          border-radius: 20px;
+          /* 圆角半径 */
+          background-color: #ffffff;
+          /* 背景色 */
+          padding: 10px;
+          /* 内边距 */
         }
       </style>
-      <!-- 添加调节透明度的模块 -->
-      <div class="opacity-slider" style="margin-left: -11px">
-        <label
-          for="opacity"
-          style="font-family: monospace; color: white"
-        ></label>
-        <input
-          type="range"
-          min="0"
-          max="1"
-          step="0.1"
-          value="1"
-          id="opacity"
-          style="background-color: #ddd; border-radius: 5px; margin-top: 5px"
-        />
+      <div class="header-menu-container" style="margin: 0 auto">
+        <nav class="header-menu">
+          <ul>
+            
+              <li><a href="/">
+                  主页
+                </a></li>
+              
+              <li><a href="/categories">
+                  分类
+                </a></li>
+              
+              <li><a href="/about">
+                  关于
+                </a></li>
+              
+          </ul>
+        </nav>
       </div>
-      <footer style="margin-right: 40px; margin-top: 20px !important; margin-bottom: 10px !important; ">
-        <iframe
-          frameborder="no"
-          marginwidth="0"
-          marginheight="0"
-          width="220"
-          height="52"
-          src="//music.163.com/outchain/player?type=2&id=1817410057&auto=0&height=32"
-        ></iframe>
-      </footer>
-      <footer style="margin-right: 40px; margin-top: 10px !important;">
-        <iframe
-          frameborder="no"
-          marginwidth="0"
-          marginheight="0"
-          width="220"
-          height="52"
-          src="//music.163.com/outchain/player?type=2&id=1492276423&auto=0&height=32"
-        ></iframe>
-      <footer style="margin-right: 40px; margin-top: 10px !important;">
-        <iframe
-          frameborder="no"
-          marginwidth="0"
-          marginheight="0"
-          width="220"
-          height="52"
-          src="//music.163.com/outchain/player?type=2&id=1492275671&auto=0&height=32"
-        ></iframe>
-      </footer>
-      <footer style="margin-right: 40px; margin-top: 10px !important;">
-        <iframe
-          frameborder="no"
-          marginwidth="0"
-          marginheight="0"
-          width="220"
-          height="52"
-          src="//music.163.com/outchain/player?type=2&id=1859652717&auto=0&height=32"
-        ></iframe>
-      </footer>
-      <footer style="margin-right: 40px; margin-top: 10px !important;">
-        <iframe
-          frameborder="no"
-          marginwidth="0"
-          marginheight="0"
-          width="220"
-          height="52"
-          src="//music.163.com/outchain/player?type=2&id=1971144922&auto=0&height=32"
-        ></iframe>
-      </footer>
-      <footer style="margin-right: 40px; margin-top: 10px !important;">
-        <iframe
-          frameborder="no"
-          marginwidth="0"
-          marginheight="0"
-          width="220"
-          height="52"
-          src="//music.163.com/outchain/player?type=0&id=7006453772&auto=0&height=32"
-        ></iframe>
-      </footer>
-      <footer style="margin-right: 40px; margin-top: 10px !important;">
-        <iframe
-          frameborder="no"
-          marginwidth="0"
-          marginheight="0"
-          width="220"
-          height="52"
-          src="//music.163.com/outchain/player?type=4&id=982973904&auto=0&height=32"
-        ></iframe>
-      </footer>
-      <footer style="margin-right: 40px; margin-top: 10px !important;">
-        <iframe
-          frameborder="no"
-          marginwidth="0"
-          marginheight="0"
-          width="220"
-          height="52"
-          src="//music.163.com/outchain/player?type=0&id=8611354633&auto=0&height=32"
-        ></iframe>
-      </footer>
-      <footer style="margin-right: 40px; margin-top: 10px !important;">
-        <iframe
-          frameborder="no"
-          marginwidth="0"
-          marginheight="0"
-          width="220"
-          height="52"
-          src="//music.163.com/outchain/player?type=2&id=1913478990&auto=0&height=32"
-        ></iframe>
-      </footer>
-    </nav>
-    <script>
-      // 监听滑块值的变化
-      document.getElementById("opacity").addEventListener("input", function () {
-        // 获取所有的 article-inner 模块
-        var articleInners = document.querySelectorAll(".article-inner");
-        var categoryMenus = document.querySelectorAll(".category-menu-inner");
+      <nav class="header-nav" style="margin: 0 auto">
+        <div class="social" style="margin-left: -10px; margin-bottom: 0px;">
+          
+            <a class="rss" target="_blank" href="https://www.x-mol.com/groups/hong_zhanyong/people" title="rss"><i
+                class="icon-rss"></i></a>
+            
+            <a class="mail" target="_blank" href="mailto:deeplower@163.com" title="mail"><i
+                class="icon-mail"></i></a>
+            
+            <a class="bilibili" target="_blank" href="https://space.bilibili.com/483390739" title="bilibili"><i
+                class="icon-bilibili"></i></a>
+            
+        </div>
+        <button id="toggle-background" style="margin-top: 0px;">
+          背景切换</button>
+        <style>
+          /* 添加的 CSS 代码 */
+          .opacity-slider input[type="range"] {
+            /* 修改滑块样式 */
+            -webkit-appearance: none;
+            appearance: none;
+            background-color: #ddd;
+            border-radius: 5px;
+            margin-top: 5px;
+            /* 调整滑块轨道的位置 */
+            /* 设置滑块轨道的样式 */
+            height: 8px;
+          }
 
-        // 保存 this 到变量 that
-        var that = this;
+          .opacity-slider input[type="range"]::-webkit-slider-thumb {
+            /* 修改滑块按钮的样式 */
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background-color: gray;
+            /* Chrome, Safari, Opera */
+            border-radius: 50%;
+          }
+        </style>
+        <!-- 添加调节透明度的模块 -->
+        <div class="opacity-slider" style="margin-left: -11px">
+          <label for="opacity" style="font-family: monospace; color: white"></label>
+          <input type="range" min="0" max="1" step="0.1" value="1" id="opacity"
+            style="background-color: #ddd; border-radius: 5px; margin-top: 5px" />
+        </div>
+        <footer style="margin-right: 40px; margin-top: 20px !important; margin-bottom: 10px !important; ">
+          <iframe frameborder="no" marginwidth="0" marginheight="0" width="220" height="52"
+            src="//music.163.com/outchain/player?type=2&id=1817410057&auto=0&height=32"></iframe>
+        </footer>
+        <footer style="margin-right: 40px; margin-top: 10px !important;">
+          <iframe frameborder="no" marginwidth="0" marginheight="0" width="220" height="52"
+            src="//music.163.com/outchain/player?type=2&id=1492276423&auto=0&height=32"></iframe>
+          <footer style="margin-right: 40px; margin-top: 10px !important;">
+            <iframe frameborder="no" marginwidth="0" marginheight="0" width="220" height="52"
+              src="//music.163.com/outchain/player?type=2&id=1492275671&auto=0&height=32"></iframe>
+          </footer>
+          <footer style="margin-right: 40px; margin-top: 10px !important;">
+            <iframe frameborder="no" marginwidth="0" marginheight="0" width="220" height="52"
+              src="//music.163.com/outchain/player?type=2&id=1859652717&auto=0&height=32"></iframe>
+          </footer>
+          <footer style="margin-right: 40px; margin-top: 10px !important;">
+            <iframe frameborder="no" marginwidth="0" marginheight="0" width="220" height="52"
+              src="//music.163.com/outchain/player?type=2&id=1971144922&auto=0&height=32"></iframe>
+          </footer>
+          <footer style="margin-right: 40px; margin-top: 10px !important;">
+            <iframe frameborder="no" marginwidth="0" marginheight="0" width="220" height="52"
+              src="//music.163.com/outchain/player?type=0&id=7006453772&auto=0&height=32"></iframe>
+          </footer>
+          <footer style="margin-right: 40px; margin-top: 10px !important;">
+            <iframe frameborder="no" marginwidth="0" marginheight="0" width="220" height="52"
+              src="//music.163.com/outchain/player?type=4&id=982973904&auto=0&height=32"></iframe>
+          </footer>
+          <footer style="margin-right: 40px; margin-top: 10px !important;">
+            <iframe frameborder="no" marginwidth="0" marginheight="0" width="220" height="52"
+              src="//music.163.com/outchain/player?type=0&id=8611354633&auto=0&height=32"></iframe>
+          </footer>
+          <footer style="margin-right: 40px; margin-top: 10px !important;">
+            <iframe frameborder="no" marginwidth="0" marginheight="0" width="220" height="52"
+              src="//music.163.com/outchain/player?type=2&id=1913478990&auto=0&height=32"></iframe>
+          </footer>
+      </nav>
+      <script>
+        // 监听滑块值的变化
+        document.getElementById("opacity").addEventListener("input", function () {
+          // 获取所有的 article-inner 模块
+          var articleInners = document.querySelectorAll(".article-inner");
+          var categoryMenus = document.querySelectorAll(".category-menu-inner");
 
-        // 设置所有 article-inner 模块的透明度
-        articleInners.forEach(function (articleInner) {
-          articleInner.style.opacity = that.value;
+          // 保存 this 到变量 that
+          var that = this;
+
+          // 设置所有 article-inner 模块的透明度
+          articleInners.forEach(function (articleInner) {
+            articleInner.style.opacity = that.value;
+          });
+
+          // 设置所有 category-menu-inner 模块的透明度
+          categoryMenus.forEach(function (categoryMenu) {
+            categoryMenu.style.opacity = that.value;
+          });
         });
-
-        // 设置所有 category-menu-inner 模块的透明度
-        categoryMenus.forEach(function (categoryMenu) {
-          categoryMenu.style.opacity = that.value;
-        });
-      });
-    </script>
-    <style>
-      iframe {
-        display: block;
-      }
-    </style>
-  </header>
-</div>
+      </script>
+      <style>
+        iframe {
+          display: block;
+        }
+      </style>
+    </header>
+  </div>
 
 
-<!-- 
+  <!-- 
 <div class="intrude-less">
   <header id="header" class="inner">
     <a href="/" class="profilepic" style="margin: 0 auto;">
@@ -395,7 +331,6 @@
     </style>
   </header>
 </div> -->
-
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
@@ -712,22 +647,22 @@
           <li class="post-item">
             <span class="bullet">&#8226;</span>
             <a
-              href="/2020/10/14/02-情节炸弹/"
+              href="/2020/10/13/01-当在围棋的玩法里面设置“炸弹”（测试文章）/"
               class="post-link"
-              title="从“双子玩法”到情节炸弹"
+              title="当在围棋的玩法里面设置“炸弹”"
             >
-              从“双子玩法”到情节炸弹
+              当在围棋的玩法里面设置“炸弹”
             </a>
           </li>
           
           <li class="post-item">
             <span class="bullet">&#8226;</span>
             <a
-              href="/2020/10/13/01-当在围棋的玩法里面设置“炸弹”（测试文章）/"
+              href="/2020/10/14/02-情节炸弹/"
               class="post-link"
-              title="当在围棋的玩法里面设置“炸弹”"
+              title="从“双子玩法”到情节炸弹"
             >
-              当在围棋的玩法里面设置“炸弹”
+              从“双子玩法”到情节炸弹
             </a>
           </li>
           
@@ -1018,22 +953,22 @@
           <li class="post-item">
             <span class="bullet">&#8226;</span>
             <a
-              href="/2020/10/14/02-情节炸弹/"
+              href="/2020/10/13/01-当在围棋的玩法里面设置“炸弹”（测试文章）/"
               class="post-link"
-              title="从“双子玩法”到情节炸弹"
+              title="当在围棋的玩法里面设置“炸弹”"
             >
-              从“双子玩法”到情节炸弹
+              当在围棋的玩法里面设置“炸弹”
             </a>
           </li>
           
           <li class="post-item">
             <span class="bullet">&#8226;</span>
             <a
-              href="/2020/10/13/01-当在围棋的玩法里面设置“炸弹”（测试文章）/"
+              href="/2020/10/14/02-情节炸弹/"
               class="post-link"
-              title="当在围棋的玩法里面设置“炸弹”"
+              title="从“双子玩法”到情节炸弹"
             >
-              当在围棋的玩法里面设置“炸弹”
+              从“双子玩法”到情节炸弹
             </a>
           </li>
           
@@ -1200,5 +1135,8 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
+  
+  <!-- 引入自定义的JavaScript文件 -->
+  <script src="/js/custom.js"></script>
 </body>
 </html>
