@@ -1732,7 +1732,9 @@ pre .id {
 
 #page-nav {
     text-align: center;
-    margin-top: 30px
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
 
 #page-nav .page-number {
