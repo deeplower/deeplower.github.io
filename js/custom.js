@@ -43,12 +43,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 flag = flag + 1;
             }
             else if (flag == 4) {
-                body.style.background = 'url(https://deeplower.github.io/about/index/Ganyu.jpg) no-repeat 0% 0%/ cover';
+                body.style.background = 'url(https://deeplower.github.io/about/index/Snow.jpg) no-repeat 0% 0%/ cover';
                 opacitySlider.style.display = 'block'; // 显示滑块
                 flag = flag + 1;
             }
             else {
-                body.style.background = 'url(https://deeplower.github.io/about/index/Ganyu.jpg) no-repeat 0% 0%/ cover';
+                body.style.background = 'url(https://deeplower.github.io/about/index/Tomorrow.jpg) no-repeat 0% 0%/ cover';
                 opacitySlider.style.display = 'block'; // 显示滑块
                 flag = 1;
             }
