@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (isNaN(zoomValue)){
         zoomValue==0.75;
     }
-    if (zoomValue < -0.00000001 || zoomValue > 2) {
+    if (zoomValue < -0.000000001 || zoomValue > 2) {
       alert('请输入有效的缩放比例，范围在0到2之间。');
       return;
     }
