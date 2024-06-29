@@ -884,6 +884,7 @@ textarea {
 
 body {
     overflow-y: hidden;
+    /* padding-bottom: 80px;  */
     /* background: #eaeaea */
 }
 
@@ -1730,9 +1731,22 @@ pre .id {
     border: 1px solid #086ef6
 }
 
-#page-nav {
+/* #page-nav {
+    left: 50%;
+    bottom: 0;
     text-align: center;
-    margin-top: 30px
+    padding-top: 30px;
+    z-index: 1000;
+    position: absolute;
+} */
+#page-nav {
+    bottom: 0;
+    left: 50%; /* 将左边距设置为页面宽度的一半 */
+    transform: translateX(-50%); /* 使用transform来实现水平居中 */
+    text-align: center;
+    padding-top: 30px;
+    z-index: 1000;
+    position: absolute;
 }
 
 #page-nav .page-number {
@@ -2218,8 +2232,8 @@ pre .id {
     margin: 30px;
     transition: all .2s ease-in;
     border-radius: 40px;
+    /*??*/
 }
-
 
 .article img {
     max-width: 100%
