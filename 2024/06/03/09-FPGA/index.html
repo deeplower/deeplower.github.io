@@ -43,11 +43,15 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-  <div class="intrude-less">
+  <div class="intrude-less" style="margin-top: 50px">
     <header id="header" class="inner">
       <a href="/" class="profilepic" style="margin-left: 45px">
         <img src="/img/avatar.jpg" class="js-avatar" />
       </a>
+      <div style="margin-top: 10px; margin-left: -10px; margin-bottom: 0px; text-align: center;">
+        <input type="text" id="zoomInput" value="1.00"
+               style="width: 57px; text-align: center;" oninput="applyZoom()">
+      </div>      
       <style>
         .header-menu-container {
           max-width: 80px;
@@ -8761,6 +8765,7 @@
 </div>
   </div>
   <!-- 引入自定义的JavaScript文件 -->
+  <script src="/js/zoom.js"></script>
   <script src="/js/custom.js"></script>
 </body>
 </html>
