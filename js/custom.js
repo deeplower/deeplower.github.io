@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
         opacitySlider.style.display = 'block'; // 显示滑块
     } else {
         // 设置初始纯色背景
-        body.style.background = '#696969';
+        body.style.background = '#dfdfdf';
         opacitySlider.style.display = 'none'; // 隐藏滑块
     }
 
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
     toggleButton.addEventListener('click', function () {
         // 切换背景
         if (isImageVisible) {
-            body.style.background = '#696969';
+            body.style.background = '#dfdfdf';
             opacitySlider.style.display = 'none'; // 隐藏滑块
             // 保存当前背景选择到 localStorage
             localStorage.setItem('backgroundChoice', 'color');
