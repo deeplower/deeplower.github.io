@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // {
         // 设置初始纯色背景
         body.style.background = '#dfdfdf';
-        //opacitySlider.style.display = 'none'; // 隐藏滑块
+        opacitySlider.style.display = 'none'; // 隐藏滑块
     // }
 
     // 切换按钮点击事件监听
