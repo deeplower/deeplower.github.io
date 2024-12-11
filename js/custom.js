@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // 根据上次保存的背景选择设置初始背景
-    var body = document.body;
+    // var body = document.body;
     // if (backgroundChoice === 'image') {
     //     // 根据 flag 的值设置初始背景图片
     //     if (flag === 1) {
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // body.style.background = '#dfdfdf';
         body.style.background = 'url(https://deeplower.github.io/about/index/bg.png) no-repeat 0% 0%/ cover';
         opacitySlider.style.display = 'none'; // 隐藏滑块
-        toggleButton.style.display = 'none'; // 隐藏按钮
+        //toggleButton.style.display = 'none'; // 隐藏按钮
     // }
 
     // 切换按钮点击事件监听
