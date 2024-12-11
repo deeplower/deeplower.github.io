@@ -26,25 +26,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 根据上次保存的背景选择设置初始背景
     var body = document.body;
-    if (backgroundChoice === 'image') {
-        // 根据 flag 的值设置初始背景图片
-        if (flag === 1) {
-            body.style.background = 'url(https://deeplower.github.io/about/index/Ganyu.jpg) no-repeat 0% 0%/ cover';
-        } else if (flag === 2) {
-            body.style.background = 'url(https://deeplower.github.io/about/index/Bronya.jpg) no-repeat 0% 0%/ cover';
-        } else if (flag === 3) {
-            body.style.background = 'url(https://deeplower.github.io/about/index/Shenzi.jpg) no-repeat 0% 0%/ cover';
-        } else if (flag === 4) {
-            body.style.background = 'url(https://deeplower.github.io/about/index/Snow.jpg) no-repeat 0% 0%/ cover';
-        } else {
-            body.style.background = 'url(https://deeplower.github.io/about/index/Tomorrow.jpg) no-repeat 0% 0%/ cover';
-        }
-        opacitySlider.style.display = 'block'; // 显示滑块
-    } else {
+    // if (backgroundChoice === 'image') {
+    //     // 根据 flag 的值设置初始背景图片
+    //     if (flag === 1) {
+    //         body.style.background = 'url(https://deeplower.github.io/about/index/Ganyu.jpg) no-repeat 0% 0%/ cover';
+    //     } else if (flag === 2) {
+    //         body.style.background = 'url(https://deeplower.github.io/about/index/Bronya.jpg) no-repeat 0% 0%/ cover';
+    //     } else if (flag === 3) {
+    //         body.style.background = 'url(https://deeplower.github.io/about/index/Shenzi.jpg) no-repeat 0% 0%/ cover';
+    //     } else if (flag === 4) {
+    //         body.style.background = 'url(https://deeplower.github.io/about/index/Snow.jpg) no-repeat 0% 0%/ cover';
+    //     } else {
+    //         body.style.background = 'url(https://deeplower.github.io/about/index/Tomorrow.jpg) no-repeat 0% 0%/ cover';
+    //     }
+    //     opacitySlider.style.display = 'block'; // 显示滑块
+    // } else 
+    // {
         // 设置初始纯色背景
         body.style.background = '#dfdfdf';
-        opacitySlider.style.display = 'none'; // 隐藏滑块
-    }
+        //opacitySlider.style.display = 'none'; // 隐藏滑块
+    // }
 
     // 切换按钮点击事件监听
     toggleButton.addEventListener('click', function () {
