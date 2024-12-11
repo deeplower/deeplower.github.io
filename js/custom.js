@@ -43,9 +43,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // } else 
     // {
         // 设置初始纯色背景
-        body.style.background = '#dfdfdf';
+        // body.style.background = '#dfdfdf';
+        body.style.background = 'url(https://deeplower.github.io/about/index/bg.png) no-repeat 0% 0%/ cover';
         opacitySlider.style.display = 'none'; // 隐藏滑块
-        toggleButton.style.display = 'none'; // 隐藏滑块
+        toggleButton.style.display = 'none'; // 隐藏按钮
     // }
 
     // 切换按钮点击事件监听
