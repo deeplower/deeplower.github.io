@@ -149,7 +149,47 @@
           <input type="range" min="0" max="1" step="0.1" value="1" id="opacity"
             style="background-color: #ddd; border-radius: 5px; margin-top: 5px" />
         </div>
-        <footer style="margin-right: 40px; margin-top: 20px !important; margin-bottom: 10px !important; ">
+      
+
+
+
+        <div id="fact-container" style="margin-top: 20px; color: #000; text-align: center;">
+          <p id="fact-display">加载中...</p>
+      </div>
+      <script>
+          const facts = [
+            //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!这里可以放置一些你每天想要复习的冷门知识
+              "太阳每秒释放的能量相当于百万个核弹爆炸。",
+              "人类大脑的神经网络比宇宙中的星系还要复杂。",
+              "量子计算的速度是传统计算机的百万倍。"
+          ];
+          let currentIndex = 0;
+          setInterval(() => {
+              document.getElementById('fact-display').textContent = facts[currentIndex];
+              currentIndex = (currentIndex + 1) % facts.length;
+          }, 5000);
+      </script>
+      
+        <!-- <div class="sidebar-textbox">
+          <textarea id="textbox" placeholder="在此记录你的想法或任务..."></textarea>
+      </div>
+      
+      <style>
+          .sidebar-textbox {
+              margin-top: 20px; /* 上边距设置为20px */
+              margin-left: 10px; /* 左侧边距短一点 */
+              margin-right: 10px; /* 右侧边距短一点 */
+          }
+          #textbox {
+              width: 90%; /* 设置文本框宽度为侧边栏宽度的80% */
+              height: 1000px; /* 设置文本框高度 */
+              font-size: 16px;
+              padding: 10px;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+          }
+      </style> -->
+        <!-- <footer style="margin-right: 40px; margin-top: 20px !important; margin-bottom: 10px !important; ">
           <iframe frameborder="no" marginwidth="0" marginheight="0" width="220" height="52"
             src="//music.163.com/outchain/player?type=2&id=1817410057&auto=0&height=32"></iframe>
         </footer>
@@ -183,7 +223,7 @@
           <footer style="margin-right: 40px; margin-top: 10px !important;">
             <iframe frameborder="no" marginwidth="0" marginheight="0" width="220" height="52"
               src="//music.163.com/outchain/player?type=2&id=1913478990&auto=0&height=32"></iframe>
-          </footer>
+          </footer> -->
       </nav>
       <script>
         // 监听滑块值的变化
