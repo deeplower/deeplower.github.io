@@ -149,24 +149,90 @@
         </div>
       
 
-
-
+<!-- 
         <div id="fact-container" style="margin-top: 20px; color: #000; text-align: center;">
-          <p id="fact-display">加载中...</p>
+
+          <div id="fact-display" style="font-size: 16px; font-family: monospace; margin-bottom: 10px;">
+              加载中...
+          </div>
+
+          <button id="prev-btn" style="margin-right: 10px; padding: 5px 10px; cursor: pointer; background: #007bff; color: #fff; border: none; border-radius: 5px;">上一页</button>
+          <button id="next-btn" style="padding: 5px 10px; cursor: pointer; background: #007bff; color: #fff; border: none; border-radius: 5px;">下一页</button>
       </div>
+      
       <script>
-          const facts = [
-            //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!这里可以放置一些你每天想要复习的冷门知识
-              "太阳每秒释放的能量相当于百万个核弹爆炸。",
-              "人类大脑的神经网络比宇宙中的星系还要复杂。",
-              "量子计算的速度是传统计算机的百万倍。"
-          ];
-          let currentIndex = 0;
-          setInterval(() => {
-              document.getElementById('fact-display').textContent = facts[currentIndex];
-              currentIndex = (currentIndex + 1) % facts.length;
-          }, 5000);
+          document.addEventListener("DOMContentLoaded", function () {
+              const facts = [
+                  "太阳每秒释放的能量相当于百万个核弹爆炸。",
+                  "人类大脑的神经网络比宇宙中的星系还要复杂。",
+                  "量子计算的速度是传统计算机的百万倍。",
+                  "黑洞的引力可以扭曲时空，使时间流逝变慢。",
+                  "地球上的黄金大部分来自数十亿年前的陨石撞击。",
+                  "光子是没有静止质量的粒子，却能携带能量。",
+                  "植物会发出低频“尖叫声”来应对压力。",
+                  "海洋中有比银河系星星还多的微小浮游生物。",
+                  "引力波的发现验证了爱因斯坦的广义相对论。",
+                  "火星上的最高山是地球上最高山的三倍。",
+                  "太阳每秒释放的能量相当于百万个核弹爆炸。",
+                  "人类大脑的神经网络比宇宙中的星系还要复杂。",
+                  "量子计算的速度是传统计算机的百万倍。",
+                  "黑洞的引力可以扭曲时空，使时间流逝变慢。",
+                  "地球上的黄金大部分来自数十亿年前的陨石撞击。",
+                  "光子是没有静止质量的粒子，却能携带能量。",
+                  "植物会发出低频“尖叫声”来应对压力。",
+                  "海洋中有比银河系星星还多的微小浮游生物。",
+                  "引力波的发现验证了爱因斯坦的广义相对论。",
+                  "火星上的最高山是地球上最高山的三倍。"
+              ];
+      
+              let currentIndex = 0;
+              const itemsPerPage = 10;
+      
+              // 显示当前页的事实
+              function displayFacts() {
+                  const factDisplay = document.getElementById('fact-display');
+                  factDisplay.innerHTML = ""; // 清空内容
+      
+                  if (facts.length === 0) {
+                      factDisplay.textContent = "没有可显示的事实";
+                      return;
+                  }
+      
+                  for (let i = currentIndex; i < Math.min(currentIndex + itemsPerPage, facts.length); i++) {
+                      const factItem = document.createElement('p');
+                      factItem.textContent = facts[i];
+                      factItem.style.margin = "5px 0";
+                      factDisplay.appendChild(factItem);
+                  }
+              }
+      
+              // 点击“上一页”按钮
+              document.getElementById('prev-btn').addEventListener('click', () => {
+                  if (currentIndex > 0) {
+                      currentIndex -= itemsPerPage;
+                      displayFacts();
+                  } else {
+                      alert("已经是第一页了！");
+                  }
+              });
+      
+              // 点击“下一页”按钮
+              document.getElementById('next-btn').addEventListener('click', () => {
+                  if (currentIndex + itemsPerPage < facts.length) {
+                      currentIndex += itemsPerPage;
+                      displayFacts();
+                  } else {
+                      alert("已经是最后一页了！");
+                  }
+              });
+      
+              // 页面加载完成后显示内容
+              displayFacts();
+          });
       </script>
+      
+      
+     -->
       
         <!-- <div class="sidebar-textbox">
           <textarea id="textbox" placeholder="在此记录你的想法或任务..."></textarea>
