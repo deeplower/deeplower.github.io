@@ -943,17 +943,21 @@ html {
 }
 
 .left-col {
-    /* background:#fff; */
     background: linear-gradient(rgba(200, 200, 200, 0), rgba(200, 200, 200, 0));
     width: 300px;
     position: fixed;
     opacity: 1;
     transition: all .3s ease-in;
     -ms-transition: all .3s ease-in;
-    height: 100%;
-    z-index: 999;
+
+    margin-top: 100px;
+    vertical-align: middle;
+
+    /* 使侧边栏整体居中 */
     transform: translateY(100%);
 }
+
+
 
 
 .left-col .overlay {
