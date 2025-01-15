@@ -951,7 +951,8 @@ html {
     transition: all .3s ease-in;
     -ms-transition: all .3s ease-in;
     height: 100%;
-    z-index: 999
+    z-index: 999;
+    transform: translateY(100%);
 }
 
 
