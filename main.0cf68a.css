@@ -943,7 +943,7 @@ html {
 }
 
 .left-col {
-    /* background:#fff; */
+    /* background: #fff; */
     background: linear-gradient(rgba(200, 200, 200, 0), rgba(200, 200, 200, 0));
     width: 300px;
     position: fixed;
@@ -951,9 +951,13 @@ html {
     transition: all .3s ease-in;
     -ms-transition: all .3s ease-in;
     height: 100%;
-    z-index: 999
+    z-index: 999;
+    display: flex
+;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -250px;
 }
-
 
 .left-col .overlay {
     width: 100%;
