@@ -6,17 +6,13 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>FPGA-QuartusII——HDLBits学习记录 | 颔首</title>
+  <title>Archives: 2025 | 颔首</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="0-1 开始 第一步 欢迎来到HDLBits! 对于数字逻辑的入门，一开始可能比较困难。因为你需要学习新的概念，一种新的语言（硬件描述语言，Hardware Description Language）例如Verilog，一些新的软件包，通常还需要FPGA开发板。这些新内容的学习几乎是同时进行的。而HDLBits只需要简单点击一下“仿真”（Simulate）按钮，就可以设计、调试简单电路。 设计一个">
-<meta property="og:type" content="article">
-<meta property="og:title" content="FPGA-QuartusII——HDLBits学习记录">
-<meta property="og:url" content="http://example.com/2024/06/03/04-FPGA/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="颔首">
+<meta property="og:url" content="http://example.com/archives/2025/index.html">
 <meta property="og:site_name" content="颔首">
-<meta property="og:description" content="0-1 开始 第一步 欢迎来到HDLBits! 对于数字逻辑的入门，一开始可能比较困难。因为你需要学习新的概念，一种新的语言（硬件描述语言，Hardware Description Language）例如Verilog，一些新的软件包，通常还需要FPGA开发板。这些新内容的学习几乎是同时进行的。而HDLBits只需要简单点击一下“仿真”（Simulate）按钮，就可以设计、调试简单电路。 设计一个">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-06-03T14:10:20.000Z">
-<meta property="article:modified_time" content="2024-06-26T03:43:43.606Z">
 <meta property="article:author" content="DEEPLOWER">
 <meta name="twitter:card" content="summary">
   
@@ -515,169 +511,43 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-04-FPGA" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
+            
+  
+  
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      FPGA-QuartusII——HDLBits学习记录
-    </h1>
-  
-
-        
-        <a href="/2024/06/03/04-FPGA/" class="archive-article-date">
-  	<time datetime="2024-06-03T14:10:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-06-03</time>
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2025" class="archive-year">2025</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2025/01/17/05-2025%E7%A0%94%E7%A9%B6%E6%96%B9%E5%90%91%E5%B0%8F%E7%BB%93/" class="archive-article-date">
+  	<time datetime="2025-01-17T01:49:24.979Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-01-17</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1>0-1 开始</h1>
-<h2 id="第一步">第一步</h2>
-<p>欢迎来到HDLBits!</p>
-<p>对于数字逻辑的入门，一开始可能比较困难。因为你需要学习新的概念，一种新的语言（硬件描述语言，<strong>H</strong>ardware <strong>D</strong>escription <strong>L</strong>anguage）例如Verilog，一些新的软件包，通常还需要FPGA开发板。这些新内容的学习几乎是同时进行的。而HDLBits只需要简单点击一下“仿真”（Simulate）按钮，就可以设计、调试简单电路。</p>
-<p>设计一个电路需要以下步骤：撰写HDL代码（例如Verilog代码）、编译该代码从而生成一个电路、仿真电路并修正错误。</p>
-<span id="more"></span>
-<h2 id="写代码">写代码</h2>
-<p>最简单的写代码的方式就是在下面的编辑框内编写你的代码。对于每一个问题，我们已经写好了该问题部分必要的代码以简化你的工作。你只需要完成该电路的剩余代码即可。</p>
-<p>编写完代码后，点击提交（Submit）开始编译和调试你的设计。</p>
-<h2 id="编译（逻辑分析）">编译（逻辑分析）</h2>
-<p>你所写的代码被Altera Quartus编译并生成电路。这个过程Quartus会生成巨量的信息。点击“展示Quartus信息”（<strong>Show Quartus messages</strong>）来展开/隐藏这些信息。对于警告信息（warnings）需要辩证地看待。消除大量的警告固然很好，但是警告毕竟不是报错，消除全部的警告在有些情况下并不现实。</p>
-<h2 id="仿真">仿真</h2>
-<p>对编译好的电路需要仿真，以测试电路功能是否正常。进行仿真时，HDLBits会使用ModelSim同时仿真你编译生成的电路和网站自带的参考电路，然后对比两者的输出。仿真报告会反映两种信息：</p>
-<ul>
-<li>不匹配信息</li>
-</ul>
-<p>仿真报告会报告你的电路是否和参考电路<strong>完全匹配</strong>（零错误）。如果不是完全匹配，仿真报告会详细反映<strong>不匹配的情况</strong>。不匹配是指你的电路输出的样例和对应（对应是指相同输入）参考电路输出的样例不相同。</p>
-<ul>
-<li>时序图</li>
-</ul>
-<p>仿真报告会生成时序图（timing diagrams)。时序图是指在运行测试矢量时的电路输出。仿真的波形分为三个部分：输入、你的电路输出、参考电路输出。如果你的电路是正确的，那么你的电路输出和参考电路输出是相同的。如果不完全相同，仿真报告会在Mismatch中反映出哪些样例是不相同的。</p>
-<blockquote>
-<p>顶级（top-level）top_module的模块名和端口名不能更改，否则会产生仿真错误。</p>
-</blockquote>
-<h2 id="最终状态">最终状态</h2>
-<p>如果你的电路是正确的，你可以看到“状态：成功！”（<strong>Status: Success!</strong>）的字样。不正确的情况有以下几种：</p>
-<ul>
-<li><strong>Compile Error</strong>（编译错误） — 电路没有被编译出来→说明你的代码有语法错误或者无法生成合理的电路</li>
-<li><strong>Simulation Error</strong>（仿真错误） — 电路被编译出来了，但是仿真没有完成</li>
-<li><strong>Incorrect</strong>（不正确） — 电路和仿真都完成了，但是你的电路输出和参考电路的输出不匹配</li>
-</ul>
-<p>你可以在<a target="_blank" rel="noopener" href="https://hdlbits.01xz.net/wiki/Special:VlgStats/Me"><strong>我的统计</strong></a>页面跟踪或者分享你的进度。</p>
-<hr>
-<p>以上就是对HDLBits的简单介绍，下面进行一个简单的示例。</p>
-<h2 id="问题说明">问题说明</h2>
-<blockquote>
-<p>我们将从少量 HDL 开始，以熟悉 HDLBits 使用的接口。下面是本练习所需的电路描述：</p>
-<p>构建一个没有输入、只有一个输出的电路。该输出应始终驱动 1（或逻辑高电平）。</p>
-</blockquote>
-<blockquote>
-<p>预计解决方案长度：约 1 行。</p>
-</blockquote>
-<blockquote>
-<h3 id="模块声明">模块声明</h3>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">module top_module( output one );</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>提示：我们想要将1赋值给输出端</p>
-</blockquote>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//正确代码示例</span></span><br><span class="line"><span class="keyword">module</span> top_module( <span class="keyword">output</span> one );</span><br><span class="line">    <span class="keyword">assign</span> one = <span class="number">1&#x27;b1</span>;</span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure>
-<h1>0-2 输出零</h1>
-<p>建立一个没有输入、只有一个输出的电路，输出常数 0</p>
-<p>既然你已经完成了前面的问题，那么让我们来看看你能否在没有提示的情况下完成一个简单的问题。</p>
-<blockquote>
-<p>HDLBits 使用 Verilog-2001 ANSI 样式的端口声明语法，因为这种语法更易于阅读并能减少错别字。如果您愿意，也可以使用较早的 Verilog-1995 语法。例如，以下两个模块声明是可接受的等价声明：</p>
-</blockquote>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">module</span> top_module ( zero );</span><br><span class="line">    <span class="keyword">output</span> zero;</span><br><span class="line">    <span class="comment">// Verilog-1995</span></span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">module</span> top_module ( <span class="keyword">output</span> zero ); </span><br><span class="line">    <span class="comment">// Verilog-2001</span></span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<h3 id="模块声明-2">模块声明</h3>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">module</span> top_module( <span class="keyword">output</span> one );</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>提示：有趣的事实，Quartus 综合时，不给信号赋值通常会导致信号为 0。</p>
-</blockquote>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">module</span> top_module(</span><br><span class="line">    <span class="keyword">output</span> zero</span><br><span class="line">);</span><br><span class="line"><span class="comment">//不用赋值即可通过</span></span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure>
+        </div>
+    	 
+        <div class="article-info info-on-right">
+          
+          
 
-      
-
-      <!--  -->
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习记录//" class="article-tag-list-link color5">学习记录</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2025/01/17/05-2025%E7%A0%94%E7%A9%B6%E6%96%B9%E5%90%91%E5%B0%8F%E7%BB%93/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
   
   
-    <a href="/2024/05/28/03-Keil5MDK%E5%88%9B%E5%BB%BASTM32%E5%B7%A5%E7%A8%8B%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Keil 5 STM32 编写准备工作</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -700,8 +570,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
