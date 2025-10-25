@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>文章分类 | 颔首</title>
+  <title>离散化与符号化 | 颔首</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="文章分类">
-<meta property="og:url" content="http://example.com/categories/index.html">
+  <meta name="description" content="电子领域中有一对概念，模拟和离散。 我们平常使用的手机、电脑，其中的集成电路中大部分芯片都是处理和分析离散信号的。也有处理和分析模拟信号的，但是由于处理模拟信号的电路设计与逻辑分析都较为复杂，所以应用的较少一点。然而，《新概念模拟电路》在开篇的时候就说：  “我们生活的世界中存在的信号都是模拟信号，我们的感官也只能接受模拟信号。因此无用论数字电子技术怎样发展，他都不能取代模拟电子技术”。  我对这">
+<meta property="og:type" content="article">
+<meta property="og:title" content="离散化与符号化">
+<meta property="og:url" content="http://example.com/2025/10/25/08-%E7%A6%BB%E6%95%A3%E4%B8%8E%E8%BF%9E%E7%BB%AD/index.html">
 <meta property="og:site_name" content="颔首">
+<meta property="og:description" content="电子领域中有一对概念，模拟和离散。 我们平常使用的手机、电脑，其中的集成电路中大部分芯片都是处理和分析离散信号的。也有处理和分析模拟信号的，但是由于处理模拟信号的电路设计与逻辑分析都较为复杂，所以应用的较少一点。然而，《新概念模拟电路》在开篇的时候就说：  “我们生活的世界中存在的信号都是模拟信号，我们的感官也只能接受模拟信号。因此无用论数字电子技术怎样发展，他都不能取代模拟电子技术”。  我对这">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2019-08-19T03:48:35.000Z">
-<meta property="article:modified_time" content="2024-05-16T14:01:41.249Z">
+<meta property="article:published_time" content="2025-10-24T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-10-25T10:24:19.151Z">
 <meta property="article:author" content="DEEPLOWER">
 <meta name="twitter:card" content="summary">
   
@@ -284,447 +286,113 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <!-- <article class="article category-menu-inner">
-  <h3
-    class="category-count"
-    style="
-      font-size: 32px;
-      text-align: center;
-      font-weight: 1000;
-      font-family: cursive;
-    "
-  >
-    文章分类
-  </h3>
-  <style>
-    .article {
-      background-color: rgba(255, 255, 255, 1); /* 白色背景，透明度为0.7 */
-      padding-left: 20px;
-      padding-right: 20px;
-      border-radius: 40px;
-      padding-bottom: 50px;
-      padding-top: 5px;
-    }
-    .category-menu {
-      margin: 0 auto;
-      width: 80%; /* 这里可以根据需要调整宽度 */
-    }
-    .category-list {
-      list-style-type: none;
-      padding-left: 0;
-      text-align: start;
-      font-family: cursive;
-    }
-    .category-item {
-      margin-bottom: 10px; /* 间距可以根据需要调整 */
-      cursor: pointer; /* 设置鼠标指针为手型 */
-    }
-    .category-name {
-      vertical-align: middle !important;
-      font-size: 30px;
-      font-weight: bold;
-      font-family: cursive;
-    }
-    .post-list {
-      font-size: 30px;
-      list-style-type: none;
-      padding-left: 20px; /*这里可以根据需要调整缩进*/
-      display: none; /* 默认隐藏二级菜单 */
-    }
-    .post-item {
-      margin-bottom: 5px; /* 间距可以根据需要调整 */
-    }
-    .post-link {
-      display: inline-block;
-      vertical-align: middle;
-      font-size: 28px;
-    }
-    .bullet {
-      vertical-align: middle;
-      display: inline-block;
-      font-size: 30px !important;
-    }
-    .category-item:hover .category-name {
-      /* 当鼠标悬停在一级目录上时 */
-      /* text-decoration: underline;  */
-      opacity: 0.7;
-      color: #696969;
-    }
-    @media screen and (max-width: 800px) {
-      .bullet {
-        display: none;
-      }
-    }
-  </style>
-
-  <div class="category-menu">
-    <ul class="category-list">
-      
-      <li class="category-item" onclick="toggleSubmenu(this)">
-        <span class="bullet">&#8226;</span>
-        <span class="category-name">学习记录</span>
-        
-        <ul class="post-list">
-          
-          <li class="post-item">
-            <span class="bullet">&#8226;</span>
-            <a
-              href="/2025/01/26/06-FPGA与数字IC的区别/"
-              class="post-link"
-              title="FPGA与数字IC的区别"
-            >
-              FPGA与数字IC的区别
-            </a>
-          </li>
-          
-          <li class="post-item">
-            <span class="bullet">&#8226;</span>
-            <a
-              href="/2024/06/03/04-FPGA/"
-              class="post-link"
-              title="FPGA-QuartusII——HDLBits学习记录"
-            >
-              FPGA-QuartusII——HDLBits学习记录
-            </a>
-          </li>
-          
-          <li class="post-item">
-            <span class="bullet">&#8226;</span>
-            <a
-              href="/2024/05/14/02-项目实现对电池输出功率的远程监测/"
-              class="post-link"
-              title="电池功率远程监测"
-            >
-              电池功率远程监测
-            </a>
-          </li>
-          
-          <li class="post-item">
-            <span class="bullet">&#8226;</span>
-            <a
-              href="/2025/01/17/05-2025研究方向小结/"
-              class="post-link"
-              title="2025研究方向小结"
-            >
-              2025研究方向小结
-            </a>
-          </li>
-          
-        </ul>
-        
-      </li>
-      
-      <li class="category-item" onclick="toggleSubmenu(this)">
-        <span class="bullet">&#8226;</span>
-        <span class="category-name">转载</span>
-        
-        <ul class="post-list">
-          
-          <li class="post-item">
-            <span class="bullet">&#8226;</span>
-            <a
-              href="/2020/10/15/01-做无益目标的事是在浪费时间吗/"
-              class="post-link"
-              title="做无益目标的事是在浪费时间吗"
-            >
-              做无益目标的事是在浪费时间吗
-            </a>
-          </li>
-          
-        </ul>
-        
-      </li>
-      
-      <li class="category-item" onclick="toggleSubmenu(this)">
-        <span class="bullet">&#8226;</span>
-        <span class="category-name">软件使用</span>
-        
-        <ul class="post-list">
-          
-          <li class="post-item">
-            <span class="bullet">&#8226;</span>
-            <a
-              href="/2024/05/28/03-Keil5MDK创建STM32工程的准备工作/"
-              class="post-link"
-              title="Keil 5 STM32 编写准备工作"
-            >
-              Keil 5 STM32 编写准备工作
-            </a>
-          </li>
-          
-        </ul>
-        
-      </li>
-      
-      <li class="category-item" onclick="toggleSubmenu(this)">
-        <span class="bullet">&#8226;</span>
-        <span class="category-name">随笔</span>
-        
-        <ul class="post-list">
-          
-          <li class="post-item">
-            <span class="bullet">&#8226;</span>
-            <a
-              href="/2025/10/24/07-星期三星期四/"
-              class="post-link"
-              title="星期三与星期四"
-            >
-              星期三与星期四
-            </a>
-          </li>
-          
-          <li class="post-item">
-            <span class="bullet">&#8226;</span>
-            <a
-              href="/2025/10/25/08-离散与连续/"
-              class="post-link"
-              title="离散化与符号化"
-            >
-              离散化与符号化
-            </a>
-          </li>
-          
-        </ul>
-        
-      </li>
-      
-    </ul>
-  </div>
-
-  <div class="tag-cloud">
+            <article id="post-08-离散与连续" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-  </div>
-
-  <script>
-    function toggleSubmenu(categoryItem) {
-      var submenu = categoryItem.querySelector(".post-list");
-      if (submenu.style.display === "none") {
-        submenu.style.display = "block";
-      } else {
-        submenu.style.display = "none";
-      }
-    }
-  </script>
-</article> -->
-
-<article class="article category-menu-inner">
-  <h3 class="category-count" style="
-      font-size: 45px;
-      text-align: center;
-      font-weight: 1000;
-      font-family: cursive;
-    ">
-    文章分类<!-- 4 -->
-  </h3>
-  <style>
-    .article {
-      background-color: rgba(255, 255, 255, 1);
-      /* 白色背景，透明度为0.7 */
-      padding-left: 20px;
-      padding-right: 20px;
-      border-radius: 40px;
-      padding-bottom: 50px;
-      padding-top: 5px;
-    }
-
-    .category-menu {
-      margin: 0 auto;
-      width: 80%;
-      /* 这里可以根据需要调整宽度 */
-    }
-
-    .category-list {
-      list-style-type: none;
-      padding-left: 0;
-      text-align: start;
-      font-family: times, cursive;
-    }
-
-    .category-item {
-      margin-bottom: 10px;
-      /* 间距可以根据需要调整 */
-      cursor: pointer;
-      /* 设置鼠标指针为手型 */
-    }
-
-    .category-name {
-      vertical-align: middle !important;
-      font-size: 30px;
-      font-weight: bold;
-      font-family: cursive;
-    }
-
-    .post-list {
-      font-size: 30px;
-      list-style-type: none;
-      padding-left: 20px;
-      /*这里可以根据需要调整缩进*/
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-    }
-
-    .post-item {
-      margin-left: 30px;
-    }
-
-    .post-link {
-      display: inline-block;
-      vertical-align: middle;
-      font-size: 28px;
-    }
-
-    .bullet {
-      vertical-align: middle;
-      display: inline-block;
-      font-size: 30px !important;
-    }
-
-    .category-item:hover .category-name {
-      /* 当鼠标悬停在一级目录上时 */
-      /* text-decoration: underline;  */
-      opacity: 0.7;
-      color: #696969;
-    }
-
-    @media screen and (max-width: 800px) {
-      .bullet {
-        display: none;
-      }
-    }
-  </style>
-
-  <div class="category-menu">
-    <ul class="category-list">
-      
-        <li class="category-item">
-          <!-- 删除点击事件 -->
-          <span class="bullet">&#8226;</span>
-          <span class="category-name">
-            学习记录
-          </span>
-          
-            <ul class="post-list">
-              
-                <li class="post-item">
-                  <span class="bullet">&#8226;</span>
-                  <a href="/2025/01/26/06-FPGA与数字IC的区别/" class="post-link" title="FPGA与数字IC的区别">
-                    FPGA与数字IC的区别
-                  </a>
-                </li>
-                
-                <li class="post-item">
-                  <span class="bullet">&#8226;</span>
-                  <a href="/2024/06/03/04-FPGA/" class="post-link" title="FPGA-QuartusII——HDLBits学习记录">
-                    FPGA-QuartusII——HDLBits学习记录
-                  </a>
-                </li>
-                
-                <li class="post-item">
-                  <span class="bullet">&#8226;</span>
-                  <a href="/2024/05/14/02-项目实现对电池输出功率的远程监测/" class="post-link" title="电池功率远程监测">
-                    电池功率远程监测
-                  </a>
-                </li>
-                
-                <li class="post-item">
-                  <span class="bullet">&#8226;</span>
-                  <a href="/2025/01/17/05-2025研究方向小结/" class="post-link" title="2025研究方向小结">
-                    2025研究方向小结
-                  </a>
-                </li>
-                
-            </ul>
-            
-        </li>
+      <header class="article-header">
         
-        <li class="category-item">
-          <!-- 删除点击事件 -->
-          <span class="bullet">&#8226;</span>
-          <span class="category-name">
-            转载
-          </span>
-          
-            <ul class="post-list">
-              
-                <li class="post-item">
-                  <span class="bullet">&#8226;</span>
-                  <a href="/2020/10/15/01-做无益目标的事是在浪费时间吗/" class="post-link" title="做无益目标的事是在浪费时间吗">
-                    做无益目标的事是在浪费时间吗
-                  </a>
-                </li>
-                
-            </ul>
-            
-        </li>
-        
-        <li class="category-item">
-          <!-- 删除点击事件 -->
-          <span class="bullet">&#8226;</span>
-          <span class="category-name">
-            软件使用
-          </span>
-          
-            <ul class="post-list">
-              
-                <li class="post-item">
-                  <span class="bullet">&#8226;</span>
-                  <a href="/2024/05/28/03-Keil5MDK创建STM32工程的准备工作/" class="post-link" title="Keil 5 STM32 编写准备工作">
-                    Keil 5 STM32 编写准备工作
-                  </a>
-                </li>
-                
-            </ul>
-            
-        </li>
-        
-        <li class="category-item">
-          <!-- 删除点击事件 -->
-          <span class="bullet">&#8226;</span>
-          <span class="category-name">
-            随笔
-          </span>
-          
-            <ul class="post-list">
-              
-                <li class="post-item">
-                  <span class="bullet">&#8226;</span>
-                  <a href="/2025/10/24/07-星期三星期四/" class="post-link" title="星期三与星期四">
-                    星期三与星期四
-                  </a>
-                </li>
-                
-                <li class="post-item">
-                  <span class="bullet">&#8226;</span>
-                  <a href="/2025/10/25/08-离散与连续/" class="post-link" title="离散化与符号化">
-                    离散化与符号化
-                  </a>
-                </li>
-                
-            </ul>
-            
-        </li>
-        
-    </ul>
-  </div>
+  
+    <h1 class="article-title" itemprop="name">
+      离散化与符号化
+    </h1>
+  
 
-  <div class="tag-cloud">
+        
+        <a href="/2025/10/25/08-%E7%A6%BB%E6%95%A3%E4%B8%8E%E8%BF%9E%E7%BB%AD/" class="archive-article-date">
+  	<time datetime="2025-10-24T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-10-25</time>
+</a>
+        
+      </header>
     
-  </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>电子领域中有一对概念，模拟和离散。</p>
+<p>我们平常使用的手机、电脑，其中的集成电路中大部分芯片都是处理和分析离散信号的。也有处理和分析模拟信号的，但是由于处理模拟信号的电路设计与逻辑分析都较为复杂，所以应用的较少一点。然而，《新概念模拟电路》在开篇的时候就说：</p>
+<blockquote>
+<p>“我们生活的世界中存在的信号都是模拟信号，我们的感官也只能接受模拟信号。因此无用论数字电子技术怎样发展，他都不能取代模拟电子技术”。</p>
+</blockquote>
+<p>我对这句话印象很深刻，因为我认为这句话一定会在未来改变这个学科。模拟信号中藏着太多的秘密，我作为学生学习过的信号处理方法，例如时域、频域分析远远不能穷尽其中的规律。离散信号的产生，就是人们的大脑欠缺对模拟信号的分析能力，而数字信号的处理到后来之所以方法如此复杂，就是因为人们通过离散模拟信号的代价。</p>
+<span id="more"></span>
+<p>我狂言了，但是有何不可呢？</p>
+<p>话锋一转，我想聊聊别的。我最近在读《非暴力沟通》的时候，读到一句：“分类会带来很多问题，这让我感觉很奇怪。所谓“分类”，不过是一种认识事物的方法罢了，怎么会带来问题呢？后来仔细思考，才发现我太迟钝了。不能百分百说分类是一种暴力，但是在日常生活中确实无时无刻在施加这种名为分类的暴力。一方面，分类是一种含有“指导思想”的方法，无论有心还是无意，本身就包含某种意指。再者，“类”这种东西本身就是对一种特征的描述，而分类，其实就是根据某一些特征把不同事物划成几块的方法。这种方法在理学、工学中描述死物的时候固然能促进我们的理解，但是一旦描述人或者社会特征，不能说不行，只是一定要严谨一点、认真一点，深化自己的认知，不要随随便便地说错话。如果用错，或者是用的不好，不管你有没有这个意思，都是一种极为凶狠的暴力。</p>
+<p>原文如下，与大家分享：</p>
+<blockquote>
+<p>语义学家 Wendell Johnson 指出，用静态的语言来表达或捕捉瞬息万变的现实世界，会带来很多问题。他说：“我们的语言年代久远，是有缺陷的工具。它反映着泛灵论的思想【注1：什么玩意？】，倾向于谈论稳定与恒常，谈论相似性、常态和分类，神奇的转变、立竿见影的疗效、简化的问题以及终极解决方案。然而，我们尝试用语言符号化【注2：类似于模拟信号的离散化】的这个世界，却包含了无穷无尽的过程、变化、维度、变数、关系、功能、互动、发展、学习、应对和复杂性。不断变化的世界与我们相对静态的语言形式并不匹配，我们的许多问题正是因此产生。</p>
+</blockquote>
+<p>其实写到这里，我有点黯然了。现在社交媒体太发达了，类似“分类”这种使人心头一快的语言行为确实能在短时间内俘获人心。这样使得群体的同质化思考越来越严重，甚至会在潜意识里代替人们的个人思考。这样会让人变得没有生机，感觉不好。但是没办法。</p>
+<p>太纤细了吗？或许有时候，不对，是大部分时候，没那么纤细才能过的舒服一点。只怕是在没用的地方纤细，在该认真的地方却粗枝大叶。</p>
+<p>对于“分类”这个概念的讨论就到此为止。其实书上也没说太多，这只是一笔带过。【注3：这也是这种书一个很大的毛病，欠缺有效的分析和解释，只是留一个引子给人们思考，但是却在举事例上花了大量篇幅，实在有水字数之嫌。】我真正想说的是，语言本身何尝不是一种离散信号？是一种对真实世界的感觉的不完善表达。就算我们再穷尽我们的墨水，也无法达到我们所感受的真实。然后就不得不说，咱们的语言，中文/汉语，相较于其他语言确确实实是对真实世界感觉描述得更加准确一点（英语一般更准确但是不真实，各有所长），博大精深嘛。所以最近读一点古文，有一种养浩然之气的感觉（中学时候背的死去活来的东西，现在变成了精神食粮，讽刺）。</p>
+<p>言不尽意，今天就到这吧。</p>
 
-  <script>
-    document.querySelectorAll(".category-item").forEach(function (item) {
-      item.addEventListener("click", function () {
-        var submenu = this.querySelector(".post-list");
-        if (submenu) {
-          submenu.style.maxHeight = submenu.style.maxHeight
-            ? null
-            : submenu.scrollHeight + "px";
-        }
-      });
-    });
-  </script>
+      
+
+      <!--  -->
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/随笔//" class="article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2025/10/24/07-%E6%98%9F%E6%9C%9F%E4%B8%89%E6%98%9F%E6%9C%9F%E5%9B%9B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">星期三与星期四</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+
           </div>
         </div>
       </div>
@@ -745,7 +413,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
